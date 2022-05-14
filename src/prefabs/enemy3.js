@@ -22,7 +22,6 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 	}
 
 	update(){
-		this
 	}
 
 	/* END-USER-CODE */
