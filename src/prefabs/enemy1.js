@@ -9,13 +9,20 @@ class enemy1 extends Phaser.GameObjects.Sprite {
 		super(scene, x ?? 152, y ?? 94, texture || "enemy1", frame);
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+		this.scene.events.on("create", () => this.create());
+		this.updateEvent = this.scene.events.on("update", () => this.update());
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
+	create(){
+		this.scene.physics.world.enableBody(this);
+		
+	}
 
-	// Write your code here.
+	update(){
+		this
+	}
 
 	/* END-USER-CODE */
 }
