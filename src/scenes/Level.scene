@@ -32,6 +32,29 @@
             "components": [],
             "x": 296,
             "y": 276
+        },
+        {
+            "prefabId": "c4711ad5-e15c-4a9d-a2b2-9a876f874654",
+            "id": "be3bbec5-aa6e-4c61-8682-9bd8fab1a526",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "heart",
+            "components": [],
+            "x": 26,
+            "y": 23
+        },
+        {
+            "type": "Sprite",
+            "id": "2a08ead7-bbf3-42f9-9172-6798dcad2842",
+            "label": "enemy1",
+            "components": [],
+            "texture": {
+                "key": "enemy1"
+            },
+            "x": 479,
+            "y": 186
         }
     ],
     "plainObjects": [],

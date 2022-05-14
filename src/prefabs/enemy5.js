@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class enemy5 extends Phaser.GameObjects.Sprite {
+class Enemy5 extends Phaser.GameObjects.Sprite {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 105, y ?? 113, texture || "enemy5", frame);
+		super(scene, x ?? 0, y ?? 0, texture || "enemy5", frame);
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

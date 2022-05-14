@@ -3,7 +3,7 @@
 
 /* START OF COMPILED CODE */
 
-class heart extends Phaser.GameObjects.Sprite {
+class Heart extends Phaser.GameObjects.Sprite {
 
 	constructor(scene, x, y, texture, frame) {
 		super(scene, x ?? 0, y ?? 0, texture || "heart", frame);

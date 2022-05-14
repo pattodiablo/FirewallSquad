@@ -20,16 +20,17 @@ create(){
 	this.scene.physics.world.enableBody(this);
 	this.body.setCollideWorldBounds(true);
 	this.cursors = this.scene.input.keyboard.createCursorKeys();
+	
 }
 
 update(){
-	
 	if (this.cursors.space.isDown)
     {
 		console.log("pressing space")
 	
     }
 
+	
 	if (this.cursors.left.isDown)
     {
 		this.body.rotation-=5;
