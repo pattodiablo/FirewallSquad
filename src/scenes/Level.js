@@ -23,6 +23,10 @@ class Level extends Phaser.Scene {
 		const player = new Player(this, 296, 276);
 		this.add.existing(player);
 		
+		// heart
+		const heart = new Heart(this, 26, 23);
+		this.add.existing(heart);
+		
 		this.background = background;
 	}
 	
@@ -47,6 +51,14 @@ class Level extends Phaser.Scene {
 			loop: true
 		});
 
+		this.createEnemy1Timer = this.time.addEvent({
+			delay: 2000,                // ms
+			callback: this.crearEnemy1,
+			//args: [],
+			callbackScope: this,
+			loop: true
+		});
+
 	
 	}
 
@@ -58,8 +70,13 @@ class Level extends Phaser.Scene {
 
 		const enemy3 = new Enemy3(this, Phaser.Math.FloatBetween(0,document.body.clientWidth), Phaser.Math.FloatBetween(0,document.body.clientHeight));
 		this.add.existing(enemy3);
+	}
+	crearEnemy1(){
+		const enemy1 = new Enemy1(this,Phaser.Math.FloatBetween(0,document.body.clientWidth), Phaser.Math.FloatBetween(0,document.body.clientHeight))
+		this.add.existing(enemy1);
 
 	}
+
 	/* END-USER-CODE */
 }
 
