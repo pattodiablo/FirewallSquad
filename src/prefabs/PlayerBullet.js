@@ -9,13 +9,34 @@ class PlayerBullet extends Phaser.GameObjects.Sprite {
 		super(scene, x ?? 0, y ?? 0, texture || "playerBullet", frame);
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+		this.updateEvent = this.scene.events.once("update", () => this.create());
+		this.updateEvent = this.scene.events.on("update", () => this.update());
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
-	// Write your code here.
+	create(){
+		this.scene.physics.world.enableBody(this);
+		this.scene.physics.velocityFromRotation(this.scene.player.rotation, 800, this.body.velocity);
+	}
+
+	update(){
+		if(this.x<0){
+			this.destroy();
+		}
+		if(this.x>document.body.clientWidth){
+			this.destroy();
+		}
+
+		if(this.y<0){
+			this.destroy();
+		}
+
+		if(this.y>document.body.clientHeight){
+			this.destroy();
+		}
+	}
 
 	/* END-USER-CODE */
 }

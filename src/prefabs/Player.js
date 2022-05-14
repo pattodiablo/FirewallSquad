@@ -19,17 +19,49 @@ class Player extends Phaser.GameObjects.Sprite {
 create(){
 	this.scene.physics.world.enableBody(this);
 	this.body.setCollideWorldBounds(true);
-	this.cursors = this.scene.input.keyboard.createCursorKeys();
-	
+	this.isPressingSpacebar = false;
+	this.hasShot=false;
+
+	this.cursors = this.scene.input.keyboard.addKeys(
+		{
+		up:Phaser.Input.Keyboard.KeyCodes.W,
+		down:Phaser.Input.Keyboard.KeyCodes.S,
+		left:Phaser.Input.Keyboard.KeyCodes.A,
+		right:Phaser.Input.Keyboard.KeyCodes.D,
+		space:Phaser.Input.Keyboard.KeyCodes.SPACE
+		
+		});
+}
+
+shoot(){
+console.log("trying shoot")
+
 }
 
 update(){
+
+
 	if (this.cursors.space.isDown)
     {
-		console.log("pressing space")
+		
+		if(!this.hasShot){
+			console.log("creando shot")
+			const playerBullet = new PlayerBullet(this.scene, this.x,this.y);
+			this.scene.add.existing(playerBullet);
+		}
+	
+		this.hasShot=true
+	
 	
     }
 
+	if (this.cursors.space.isUp)
+    {
+
+		this.hasShot=false;
+		
+	
+    }
 	
 	if (this.cursors.left.isDown)
     {
@@ -43,7 +75,7 @@ update(){
 
     if (this.cursors.up.isDown)
     {
-		this.scene.physics.velocityFromRotation(this.rotation, 250, this.body.velocity);
+		this.scene.physics.velocityFromRotation(this.rotation, 350, this.body.velocity);
     }
     
 }
