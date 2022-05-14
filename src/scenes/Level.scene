@@ -8,6 +8,20 @@
     },
     "displayList": [
         {
+            "type": "TileSprite",
+            "id": "7748c3a3-c8f7-4f9c-9ac3-85572e805686",
+            "label": "background",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "background"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 64,
+            "height": 64
+        },
+        {
             "prefabId": "1ee42af7-cdd8-41dd-a7db-82fece472173",
             "id": "6dc70ad3-1397-4a6b-92e6-a21b481fb3d6",
             "unlock": [

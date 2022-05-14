@@ -23,31 +23,21 @@ create(){
 }
 
 update(){
-	this.body.velocity.x = 0;
-	this.body.velocity.y = 0;
-	this.body.angularVelocity = 0;
-
-	if (this.cursors.left.isDown) {
-		this.body.angularVelocity = -150;
-	  }
-	  if (this.cursors.right.isDown) {
-		this.body.angularVelocity = 150;
-	  }
+	if (this.cursors.left.isDown)
+    {
+		this.body.rotation-=5;
 	
-	  if (this.cursors.up.isDown) {
-		this.scene.physics.velocityFromRotation(
-		  this.rotation,
-		  150,
-		  this.body.velocity
-		);
-	  }
-	  if (this.cursors.down.isDown) {
-		this.scene.physics.velocityFromRotation(
-		  this.rotation,
-		  -150,
-		  this.body.velocity
-		);
-	  }
+    }
+    else if (this.cursors.right.isDown)
+    {
+		this.body.rotation+=5;
+    }
+
+    if (this.cursors.up.isDown)
+    {
+		this.scene.physics.velocityFromRotation(this.rotation, 400, this.body.velocity);
+    }
+    
 }
 
 	/* END-USER-CODE */

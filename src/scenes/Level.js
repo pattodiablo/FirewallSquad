@@ -16,12 +16,21 @@ class Level extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
+		// background
+		const background = this.add.tileSprite(0, 0, 64, 64, "background");
+		background.setOrigin(0, 0);
+
 		// player
 		const player = new Player(this, 296, 276);
 		this.add.existing(player);
 
+		this.background = background;
+
 		this.events.emit("scene-awake");
 	}
+
+	/** @type {Phaser.GameObjects.TileSprite} */
+	background;
 
 	/* START-USER-CODE */
 
@@ -30,6 +39,10 @@ class Level extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+
+		this.background.width=document.body.clientWidth;
+		this.background.height=document.body.clientHeight;
+	
 	}
 
 	/* END-USER-CODE */
