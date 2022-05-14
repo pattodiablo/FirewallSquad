@@ -2,10 +2,16 @@
 window.addEventListener('load', function () {
 
 	var game = new Phaser.Game({
-		width: 800,
-		height: 600,
+		width: document.body.clientWidth,
+		height:  document.body.clientHeight,
 		type: Phaser.AUTO,
         backgroundColor: "#242424",
+		physics: {
+			default: "arcade",
+			arcade: {
+				debug: true				
+			}			
+		},
 		scale: {
 			mode: Phaser.Scale.FIT,
 			autoCenter: Phaser.Scale.CENTER_BOTH

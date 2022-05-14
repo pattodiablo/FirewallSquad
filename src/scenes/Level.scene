@@ -8,112 +8,30 @@
     },
     "displayList": [
         {
-            "type": "Text",
-            "id": "b2b3dbd5-2106-41fa-8a04-9b511e3401a9",
-            "label": "text_1",
-            "components": [],
-            "x": 400,
-            "y": 408,
-            "originX": 0.5,
-            "originY": 0.5,
-            "text": "Phaser 3 + Phaser Editor 2D",
-            "fontFamily": "Arial",
-            "fontSize": "30px"
-        },
-        {
-            "prefabId": "ca162059-da7f-4abd-bcf7-afbdda029bad",
-            "id": "aa60f4e1-8dcf-4dd2-8dbe-ec29b5622062",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "enemy3",
-            "components": [],
-            "x": 619,
-            "y": 263
-        },
-        {
-            "prefabId": "a2d92a66-5472-4731-8fd5-577ab56319d8",
-            "id": "a3f45a31-3338-45e3-983a-5e77afc45e24",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "enemy1",
-            "components": [],
-            "x": 320,
-            "y": 102
-        },
-        {
-            "prefabId": "c21acaf7-38b1-4a21-8c15-80d86dc229c1",
-            "id": "f610d77f-2444-4b36-8fe0-d65cbb6dc54d",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "enemy2",
-            "components": [],
-            "x": 463,
-            "y": 171
-        },
-        {
-            "prefabId": "83edbb7a-bd8c-4052-b59d-b9b8c9cef011",
-            "id": "1acf3013-dfbe-44ab-9948-8eac043c5e68",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "heart",
-            "components": [],
-            "x": 567,
-            "y": 147
-        },
-        {
-            "prefabId": "9885b679-6478-4c62-ba54-42b0ba39d29b",
-            "id": "6607a5c8-2773-405e-8d01-e84055b31794",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "enemy4",
-            "components": [],
-            "x": 641,
-            "y": 137
-        },
-        {
-            "prefabId": "9b17ba7a-426b-47c0-8a25-7f9818c1e7d0",
-            "id": "ea715e83-e89d-47bc-b51f-05126dd10211",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "enemy5",
-            "components": [],
-            "x": 465,
-            "y": 76
-        },
-        {
-            "prefabId": "b15d3596-db0c-46d8-a1d8-ea271a87d1c4",
-            "id": "b36decfb-edf6-4a36-a384-ffbf84bcf151",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "boss",
-            "components": [],
-            "x": 310,
-            "y": 232
-        },
-        {
-            "type": "Image",
-            "id": "72923d03-0041-43f2-b681-a1e1afc79f44",
-            "label": "player",
+            "type": "TileSprite",
+            "id": "7748c3a3-c8f7-4f9c-9ac3-85572e805686",
+            "label": "background",
+            "scope": "CLASS",
             "components": [],
             "texture": {
-                "key": "player"
+                "key": "background"
             },
-            "x": 510,
-            "y": 249
+            "originX": 0,
+            "originY": 0,
+            "width": 64,
+            "height": 64
+        },
+        {
+            "prefabId": "1ee42af7-cdd8-41dd-a7db-82fece472173",
+            "id": "6dc70ad3-1397-4a6b-92e6-a21b481fb3d6",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "components": [],
+            "x": 296,
+            "y": 276
         }
     ],
     "plainObjects": [],

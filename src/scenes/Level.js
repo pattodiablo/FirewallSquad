@@ -16,30 +16,21 @@ class Level extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// text_1
-		const text_1 = this.add.text(400, 408, "", {});
-		text_1.setOrigin(0.5, 0.5);
-		text_1.text = "Phaser 3 + Phaser Editor 2D";
-		text_1.setStyle({ "fontFamily": "Arial", "fontSize": "30px" });
+		// background
+		const background = this.add.tileSprite(0, 0, 64, 64, "background");
+		background.setOrigin(0, 0);
 
-		// enemy3
-		const enemy3 = new enemy3(this, 647, 253);
-		this.add.existing(enemy3);
+		// player
+		const player = new Player(this, 296, 276);
+		this.add.existing(player);
 
-		// enemy1
-		const enemy1 = new enemy1(this, 342, 160);
-		this.add.existing(enemy1);
-
-		// enemy2
-		const enemy2 = new enemy2(this, 481, 180);
-		this.add.existing(enemy2);
-
-		// heart
-		const heart = new heart(this, 579, 146);
-		this.add.existing(heart);
+		this.background = background;
 
 		this.events.emit("scene-awake");
 	}
+
+	/** @type {Phaser.GameObjects.TileSprite} */
+	background;
 
 	/* START-USER-CODE */
 
@@ -48,6 +39,10 @@ class Level extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+
+		this.background.width=document.body.clientWidth;
+		this.background.height=document.body.clientHeight;
+	
 	}
 
 	/* END-USER-CODE */
