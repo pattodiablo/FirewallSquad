@@ -12,6 +12,13 @@
                 "key": "boss"
             },
             {
+                "url": [
+                    "src/prefabs/Boss.js"
+                ],
+                "type": "scripts",
+                "key": "Boss"
+            },
+            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"
@@ -22,9 +29,23 @@
                 "key": "enemy1"
             },
             {
+                "url": [
+                    "src/prefabs/Enemy1.js"
+                ],
+                "type": "scripts",
+                "key": "Enemy1"
+            },
+            {
                 "url": "assets/enemy2.png",
                 "type": "image",
                 "key": "enemy2"
+            },
+            {
+                "url": [
+                    "src/prefabs/Enemy2.js"
+                ],
+                "type": "scripts",
+                "key": "Enemy2"
             },
             {
                 "url": "assets/enemy3.png",
@@ -32,9 +53,23 @@
                 "key": "enemy3"
             },
             {
+                "url": [
+                    "src/prefabs/Enemy3.js"
+                ],
+                "type": "scripts",
+                "key": "Enemy3"
+            },
+            {
                 "url": "assets/enemy4.png",
                 "type": "image",
                 "key": "enemy4"
+            },
+            {
+                "url": [
+                    "src/prefabs/Enemy4.js"
+                ],
+                "type": "scripts",
+                "key": "Enemy4"
             },
             {
                 "url": "assets/enemy5.png",
@@ -42,9 +77,23 @@
                 "key": "enemy5"
             },
             {
+                "url": [
+                    "src/prefabs/Enemy5.js"
+                ],
+                "type": "scripts",
+                "key": "Enemy5"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"
+            },
+            {
+                "url": [
+                    "src/prefabs/Heart.js"
+                ],
+                "type": "scripts",
+                "key": "Heart"
             },
             {
                 "url": "assets/player.png",
@@ -57,6 +106,18 @@
                 ],
                 "type": "scripts",
                 "key": "Player"
+            },
+            {
+                "url": "assets/playerBullet.png",
+                "type": "image",
+                "key": "playerBullet"
+            },
+            {
+                "url": [
+                    "src/prefabs/PlayerBullet.js"
+                ],
+                "type": "scripts",
+                "key": "PlayerBullet"
             }
         ]
     },

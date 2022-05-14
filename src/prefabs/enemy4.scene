@@ -1,5 +1,5 @@
 {
-    "id": "7d82dd11-b138-460f-bbdf-aeb071ba0289",
+    "id": "fb3eeebb-dc34-472e-8114-8b741d149e33",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
@@ -9,7 +9,7 @@
     "displayList": [
         {
             "type": "Sprite",
-            "id": "9089f1b3-26d8-4755-a733-402779812a93",
+            "id": "9799dbf4-94e8-45b7-bac5-e0a8af1d579f",
             "label": "enemy4",
             "components": [],
             "texture": {

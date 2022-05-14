@@ -1,5 +1,5 @@
 {
-    "id": "fb2b6ad1-451f-4568-95ba-f213343e0883",
+    "id": "347e3f26-a74a-4e1e-a1b2-833389cf0ccd",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
@@ -9,14 +9,12 @@
     "displayList": [
         {
             "type": "Sprite",
-            "id": "ad3f407a-e2bc-4b46-9d20-93597a44f6d2",
+            "id": "286a0318-37cb-4b8d-be16-ca2374bd2720",
             "label": "enemy5",
             "components": [],
             "texture": {
                 "key": "enemy5"
-            },
-            "x": 105,
-            "y": 113
+            }
         }
     ],
     "plainObjects": [],

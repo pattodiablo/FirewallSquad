@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class Enemy4 extends Phaser.GameObjects.Sprite {
+class PlayerBullet extends Phaser.GameObjects.Sprite {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 0, y ?? 0, texture || "enemy4", frame);
+		super(scene, x ?? 0, y ?? 0, texture || "playerBullet", frame);
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

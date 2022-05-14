@@ -1,5 +1,5 @@
 {
-    "id": "f0255297-93b4-44ef-aad3-82942b246491",
+    "id": "6b7f365e-4192-496f-b9c9-2cbe4185a0d6",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
@@ -9,11 +9,11 @@
     "displayList": [
         {
             "type": "Sprite",
-            "id": "92355789-5979-4ca9-9a36-35c276cf8ea2",
-            "label": "enemy2",
+            "id": "7245c0f6-9a5a-474c-95f3-7227b8bba003",
+            "label": "playerBullet",
             "components": [],
             "texture": {
-                "key": "enemy2"
+                "key": "playerBullet"
             }
         }
     ],

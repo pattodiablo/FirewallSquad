@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class enemy1 extends Phaser.GameObjects.Sprite {
+class Enemy1 extends Phaser.GameObjects.Sprite {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 152, y ?? 94, texture || "enemy1", frame);
+		super(scene, x ?? 0, y ?? 0, texture || "enemy1", frame);
 
 		/* START-USER-CTR-CODE */
 		this.scene.events.on("create", () => this.create());

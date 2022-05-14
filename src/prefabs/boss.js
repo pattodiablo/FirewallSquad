@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class boss extends Phaser.GameObjects.Sprite {
+class Boss extends Phaser.GameObjects.Sprite {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 165, y ?? 140, texture || "boss", frame);
+		super(scene, x ?? 0, y ?? 0, texture || "boss", frame);
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
