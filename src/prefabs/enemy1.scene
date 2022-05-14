@@ -6,7 +6,17 @@
         "preloadPackFiles": [],
         "createMethodName": ""
     },
-    "displayList": [],
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "74d77168-6fce-4af8-8735-4fae23fe993a",
+            "label": "enemy1",
+            "components": [],
+            "texture": {
+                "key": "enemy1"
+            }
+        }
+    ],
     "plainObjects": [],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
