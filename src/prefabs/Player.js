@@ -26,10 +26,12 @@ update(){
 	if (this.cursors.left.isDown)
     {
 		this.body.velocity.x-=20;
+		this.body.rotation-=10;
     }
     else if (this.cursors.right.isDown)
     {
 		this.body.velocity.x+=20;
+		this.body.rotation+=10;
     }
 
     if (this.cursors.up.isDown)
