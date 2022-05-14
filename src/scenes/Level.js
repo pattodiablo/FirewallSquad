@@ -16,6 +16,10 @@ class Level extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
+		// player
+		const player = new Player(this, 296, 276);
+		this.add.existing(player);
+
 		this.events.emit("scene-awake");
 	}
 

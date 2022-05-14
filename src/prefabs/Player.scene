@@ -1,23 +1,20 @@
 {
-    "id": "01aefa93-6044-4159-8358-7e91310aa05f",
-    "sceneType": "SCENE",
+    "id": "1ee42af7-cdd8-41dd-a7db-82fece472173",
+    "sceneType": "PREFAB",
     "settings": {
+        "preloadMethodName": "",
         "preloadPackFiles": [],
-        "createMethodName": "editorCreate",
-        "sceneKey": "Level"
+        "createMethodName": ""
     },
     "displayList": [
         {
-            "prefabId": "1ee42af7-cdd8-41dd-a7db-82fece472173",
-            "id": "6dc70ad3-1397-4a6b-92e6-a21b481fb3d6",
-            "unlock": [
-                "x",
-                "y"
-            ],
+            "type": "Sprite",
+            "id": "f9d08b3d-8e0a-474e-ba82-02d7ca55aad6",
             "label": "player",
             "components": [],
-            "x": 296,
-            "y": 276
+            "texture": {
+                "key": "player"
+            }
         }
     ],
     "plainObjects": [],
