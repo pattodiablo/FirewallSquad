@@ -28,8 +28,34 @@ class Level extends Phaser.Scene {
 		const heart = new Heart(this, 26, 23);
 		this.add.existing(heart);
 
-		// enemy1
-		this.add.sprite(479, 186, "enemy1");
+		// heart_1
+		const heart_1 = new Heart(this, 61, 22);
+		this.add.existing(heart_1);
+
+		// heart_2
+		const heart_2 = new Heart(this, 94, 22);
+		this.add.existing(heart_2);
+
+		// Score
+		const score = this.add.text(602, 15, "", {});
+		score.text = "SCORE";
+		score.setStyle({ "color": "#ff0048", "fontFamily": "KANIT", "fontSize": "20px", "stroke": "#" });
+
+		// Ultimate
+		const ultimate = this.add.text(342, 413, "", {});
+		ultimate.text = "ULTIMATE DEFENSE";
+		ultimate.setStyle({ "color": "#ff0048", "fontFamily": "KANIT", "fontSize": "20px" });
+
+		// Counter
+		const counter = this.add.text(690, 18, "", {});
+		counter.text = "00000";
+		counter.setStyle({ "color": "#0000ff", "fontFamily": "KANIT" });
+
+		// rectangle_1
+		const rectangle_1 = this.add.rectangle(711, 24, 70, 30);
+		rectangle_1.fillColor = 16711752;
+		rectangle_1.isStroked = true;
+		rectangle_1.strokeColor = 16711752;
 
 		this.background = background;
 
