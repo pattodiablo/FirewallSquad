@@ -21,6 +21,7 @@ create(){
 	this.body.setCollideWorldBounds(true);
 	this.isPressingSpacebar = false;
 	this.hasShot=false;
+	this.body.drag=300;
 
 	this.cursors = this.scene.input.keyboard.addKeys(
 		{
