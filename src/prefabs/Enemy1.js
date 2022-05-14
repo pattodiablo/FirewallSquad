@@ -9,20 +9,13 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 		super(scene, x ?? 0, y ?? 0, texture || "enemy1", frame);
 
 		/* START-USER-CTR-CODE */
-		this.updateEvent = this.scene.events.once("update", () => this.create());
+		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
-	create(){
-		this.scene.physics.world.enableBody(this);
-		this.body.velocity.x+=Phaser.Math.Between(20,150);
-		
-	}
-
-	update(){
-	}
+	// Write your code here.
 
 	/* END-USER-CODE */
 }
