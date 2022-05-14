@@ -50,6 +50,13 @@
                 "url": "assets/player.png",
                 "type": "image",
                 "key": "player"
+            },
+            {
+                "url": [
+                    "src/prefabs/Player.js"
+                ],
+                "type": "scripts",
+                "key": "Player"
             }
         ]
     },
