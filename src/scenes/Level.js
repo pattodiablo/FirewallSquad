@@ -24,6 +24,13 @@ class Level extends Phaser.Scene {
 		const player = new Player(this, 296, 276);
 		this.add.existing(player);
 
+		// heart
+		const heart = new Heart(this, 26, 23);
+		this.add.existing(heart);
+
+		// enemy1
+		this.add.sprite(479, 186, "enemy1");
+
 		this.background = background;
 
 		this.events.emit("scene-awake");

@@ -1,5 +1,5 @@
 {
-    "id": "b894aee7-69e4-45f2-b5e8-18d94d439a3c",
+    "id": "099cd796-233f-4494-a97a-38ccb9d899c8",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
@@ -9,14 +9,12 @@
     "displayList": [
         {
             "type": "Sprite",
-            "id": "7cd1d272-71bc-429a-ab1f-f3f95f81080b",
+            "id": "8d792cc9-ad58-4546-b4d7-9f4170087506",
             "label": "boss",
             "components": [],
             "texture": {
                 "key": "boss"
-            },
-            "x": 165,
-            "y": 140
+            }
         }
     ],
     "plainObjects": [],
