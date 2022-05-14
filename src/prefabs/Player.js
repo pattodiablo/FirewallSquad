@@ -23,24 +23,28 @@ create(){
 }
 
 update(){
+	
+	if (this.cursors.space.isDown)
+    {
+		console.log("pressing space")
+	
+    }
+
 	if (this.cursors.left.isDown)
     {
-		this.body.rotation-=10;
-		this.physics.velocityFromRotation(angle, 600, this.body.velocity);
+		this.body.rotation-=5;
+	
     }
     else if (this.cursors.right.isDown)
     {
-		this.body.rotation+=10;
+		this.body.rotation+=5;
     }
 
     if (this.cursors.up.isDown)
     {
-		this.body.setveL;
+		this.scene.physics.velocityFromRotation(this.rotation, 400, this.body.velocity);
     }
-    else if (this.cursors.down.isDown)
-    {
-		this.body.velocity.y+=20;
-    }
+    
 }
 
 	/* END-USER-CODE */

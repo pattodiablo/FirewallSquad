@@ -7,6 +7,41 @@
                 "key": "background"
             },
             {
+                "url": "assets/boss.png",
+                "type": "image",
+                "key": "boss"
+            },
+            {
+                "url": "assets/dino.png",
+                "key": "dino",
+                "type": "image"
+            },
+            {
+                "url": "assets/enemy1.png",
+                "type": "image",
+                "key": "enemy1"
+            },
+            {
+                "url": "assets/enemy2.png",
+                "type": "image",
+                "key": "enemy2"
+            },
+            {
+                "url": "assets/enemy3.png",
+                "type": "image",
+                "key": "enemy3"
+            },
+            {
+                "url": "assets/enemy4.png",
+                "type": "image",
+                "key": "enemy4"
+            },
+            {
+                "url": "assets/enemy5.png",
+                "type": "image",
+                "key": "enemy5"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"
@@ -22,6 +57,18 @@
                 ],
                 "type": "scripts",
                 "key": "Player"
+            },
+            {
+                "url": "assets/playerBullet.png",
+                "type": "image",
+                "key": "playerBullet"
+            },
+            {
+                "url": [
+                    "src/prefabs/PlayerBullet.js"
+                ],
+                "type": "scripts",
+                "key": "PlayerBullet"
             }
         ]
     },

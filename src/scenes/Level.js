@@ -42,7 +42,7 @@ class Level extends Phaser.Scene {
 
 		this.background.width=document.body.clientWidth;
 		this.background.height=document.body.clientHeight;
-	
+
 	}
 
 	/* END-USER-CODE */
