@@ -1,0 +1,27 @@
+{
+    "id": "3c1c6f64-68e1-42dd-8a87-8976dc050222",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": ""
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "ae261680-097b-4d3b-b156-b7197f1522ff",
+            "label": "heart",
+            "components": [],
+            "texture": {
+                "key": "heart"
+            }
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

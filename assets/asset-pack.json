@@ -7,6 +7,11 @@
                 "key": "background"
             },
             {
+                "url": "assets/boss.png",
+                "type": "image",
+                "key": "boss"
+            },
+            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"
@@ -25,6 +30,16 @@
                 "url": "assets/enemy3.png",
                 "type": "image",
                 "key": "enemy3"
+            },
+            {
+                "url": "assets/enemy4.png",
+                "type": "image",
+                "key": "enemy4"
+            },
+            {
+                "url": "assets/enemy5.png",
+                "type": "image",
+                "key": "enemy5"
             },
             {
                 "url": "assets/heart.png",
