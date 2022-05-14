@@ -62,6 +62,13 @@
                 "url": "assets/playerBullet.png",
                 "type": "image",
                 "key": "playerBullet"
+            },
+            {
+                "url": [
+                    "src/prefabs/PlayerBullet.js"
+                ],
+                "type": "scripts",
+                "key": "PlayerBullet"
             }
         ]
     },

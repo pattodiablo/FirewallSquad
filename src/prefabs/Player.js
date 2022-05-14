@@ -23,6 +23,13 @@ create(){
 }
 
 update(){
+	
+	if (this.cursors.space.isDown)
+    {
+		console.log("pressing space")
+	
+    }
+
 	if (this.cursors.left.isDown)
     {
 		this.body.rotation-=5;
