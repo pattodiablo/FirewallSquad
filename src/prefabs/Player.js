@@ -25,16 +25,17 @@ create(){
 update(){
 	if (this.cursors.left.isDown)
     {
-		this.body.rotation--;
+		this.body.rotation-=10;
+		this.physics.velocityFromRotation(angle, 600, this.body.velocity);
     }
     else if (this.cursors.right.isDown)
     {
-		this.body.rotation++;
+		this.body.rotation+=10;
     }
 
     if (this.cursors.up.isDown)
     {
-		this.body.velocity.y-=20;
+		this.body.setveL;
     }
     else if (this.cursors.down.isDown)
     {
