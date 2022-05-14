@@ -32,6 +32,17 @@
             "components": [],
             "x": 296,
             "y": 276
+        },
+        {
+            "type": "Image",
+            "id": "aad40b15-a981-4644-9b79-2749fba5f773",
+            "label": "playerBullet",
+            "components": [],
+            "texture": {
+                "key": "playerBullet"
+            },
+            "x": 392,
+            "y": 290
         }
     ],
     "plainObjects": [],

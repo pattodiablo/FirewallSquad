@@ -57,6 +57,11 @@
                 ],
                 "type": "scripts",
                 "key": "Player"
+            },
+            {
+                "url": "assets/playerBullet.png",
+                "type": "image",
+                "key": "playerBullet"
             }
         ]
     },

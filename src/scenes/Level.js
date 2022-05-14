@@ -24,6 +24,9 @@ class Level extends Phaser.Scene {
 		const player = new Player(this, 296, 276);
 		this.add.existing(player);
 
+		// playerBullet
+		this.add.image(392, 290, "playerBullet");
+
 		this.background = background;
 
 		this.events.emit("scene-awake");
@@ -42,7 +45,7 @@ class Level extends Phaser.Scene {
 
 		this.background.width=document.body.clientWidth;
 		this.background.height=document.body.clientHeight;
-	
+
 	}
 
 	/* END-USER-CODE */
