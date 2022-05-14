@@ -10,15 +10,17 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 
 		/* START-USER-CTR-CODE */
 		this.updateEvent = this.scene.events.once("update", () => this.create());
-	
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
 	create(){
+		this.scene.physics.world.enableBody(this);
+		
+	}
 
-
+	update(){
 	}
 
 	/* END-USER-CODE */
