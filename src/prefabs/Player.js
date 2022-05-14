@@ -25,11 +25,11 @@ create(){
 update(){
 	if (this.cursors.left.isDown)
     {
-		this.body.velocity.x-=20;
+		this.body.rotation--;
     }
     else if (this.cursors.right.isDown)
     {
-		this.body.velocity.x+=20;
+		this.body.rotation++;
     }
 
     if (this.cursors.up.isDown)
