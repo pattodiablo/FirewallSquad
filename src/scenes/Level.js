@@ -39,21 +39,22 @@ class Level extends Phaser.Scene {
 
 		this.background.width=document.body.clientWidth;
 		this.background.height=document.body.clientHeight;
+		this.createEnemy3Timer = this.time.addEvent({
+			delay: 1500,                // ms
+			callback: this.crearEnemy3,
+			//args: [],
+			callbackScope: this,
+			loop: true
+		});
 
 	
 	}
 
 	update (){
-		var timer = scene.time.addEvent({
-			delay: 1500,                // ms
-			callback: this.crearEnemy1,
-			//args: [],
-			callbackScope: this,
-			loop: true
-		});
+
 	}
 
-	crearEnemy1(){
+	crearEnemy3(){
 
 		const enemy3 = new Enemy3(this, Phaser.Math.FloatBetween(0,document.body.clientWidth), Phaser.Math.FloatBetween(0,document.body.clientHeight));
 		this.add.existing(enemy3);
