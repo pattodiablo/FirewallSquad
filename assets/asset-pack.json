@@ -24,6 +24,13 @@
                 "type": "image"
             },
             {
+                "url": [
+                    "assets/audio/sfx/enemy_destroy.mp3"
+                ],
+                "type": "audio",
+                "key": "enemy_destroy"
+            },
+            {
                 "url": "assets/enemy1.png",
                 "type": "image",
                 "key": "enemy1"
@@ -166,6 +173,13 @@
                 "key": "Shield"
             },
             {
+                "url": [
+                    "assets/audio/sfx/shield_up.mp3"
+                ],
+                "type": "audio",
+                "key": "shield_up"
+            },
+            {
                 "url": "assets/ShieldImg.png",
                 "type": "image",
                 "key": "ShieldImg"
@@ -190,6 +204,13 @@
                 ],
                 "type": "audio",
                 "key": "splash_screen"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/travel.mp3"
+                ],
+                "type": "audio",
+                "key": "travel"
             }
         ]
     },
