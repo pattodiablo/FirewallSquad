@@ -101,6 +101,11 @@
                 "key": "flares"
             },
             {
+                "url": "src/scenes/GameOver.js",
+                "type": "sceneFile",
+                "key": "GameOver"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"
@@ -176,6 +181,20 @@
                 ],
                 "type": "scripts",
                 "key": "ShipShield"
+            },
+            {
+                "url": [
+                    "assets/audio/music/soundtrack01.mp3"
+                ],
+                "type": "audio",
+                "key": "soundtrack01"
+            },
+            {
+                "url": [
+                    "assets/audio/music/splash_screen.mp3"
+                ],
+                "type": "audio",
+                "key": "splash_screen"
             }
         ]
     },

@@ -1,37 +1,35 @@
 {
-    "id": "3f2d3495-9f0e-4575-8d9e-ef0ae1a39e94",
+    "id": "b1238463-cfd5-4c95-9f3b-830ac7e8df51",
     "sceneType": "SCENE",
     "settings": {
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
-        "sceneKey": "Inicio"
+        "sceneKey": "GameOver"
     },
     "displayList": [
         {
-            "type": "TileSprite",
-            "id": "c61f7343-07be-4dd1-9f7b-a0fccd0fe15f",
-            "label": "background",
+            "type": "Text",
+            "id": "1f7be749-9343-410a-a545-d9527ba4bedf",
+            "label": "gameOverText",
             "scope": "CLASS",
             "components": [],
-            "texture": {
-                "key": "background"
-            },
-            "originX": 0,
-            "originY": 0,
-            "width": 64,
-            "height": 64
+            "x": 237,
+            "y": 212,
+            "text": "GAME OVER",
+            "align": "center",
+            "fontSize": "54px"
         },
         {
             "type": "Sprite",
-            "id": "58247e8b-f530-4cc6-9861-bd274ef03fc1",
+            "id": "d5f365de-6f4a-4524-b4e4-980e240503d5",
             "label": "jugarBtn",
             "scope": "CLASS",
             "components": [],
             "texture": {
                 "key": "jugarBtn"
             },
-            "x": 420,
-            "y": 382
+            "x": 363,
+            "y": 317
         }
     ],
     "plainObjects": [],

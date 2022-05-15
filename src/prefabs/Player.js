@@ -146,7 +146,7 @@ handleEnemyCollition(){
 					break;
 			case 0:
 					this.scene.heart1.visible=false
-					//ir a gameOVer
+					this.morirAnimation();
 					break;
 		
 			default:
@@ -154,6 +154,62 @@ handleEnemyCollition(){
 		}
 	}
 	
+}
+
+morirAnimation(){
+
+	this.body.enable=false;
+	var entrandoTimeline = this.scene.tweens.createTimeline();
+	entrandoTimeline.add({
+		targets: this,
+		scale: 1.5,
+		duration: 100,
+	
+		ease: 'Linear',
+
+	});
+	entrandoTimeline.add({
+		targets: this,
+		scale: 0.1,
+		duration: 100,
+		ease: 'Linear'
+
+	});
+	entrandoTimeline.add({
+		targets: this,
+		scale: 1,
+		duration: 100,
+		ease: 'Linear',
+		onComplete: function(){
+
+			this.play("hit1",true);
+			this.particles.destroy();
+		},
+		callbackScope:this,
+	});
+
+	entrandoTimeline.add({
+		targets: this,
+		scale: 3,
+		alpha: 0.5,
+		duration: 100,
+		ease: 'Linear',
+		repeat: 3,
+		yoyo:true,
+		onComplete: function(){
+
+			this.scene.cameras.main.fadeOut(2000);
+			this.scene.cameras.main.once('camerafadeoutcomplete', function () {	
+
+				this.scene.scene.start('GameOver');
+				
+					}, this);
+		},
+		callbackScope:this
+
+	});
+	entrandoTimeline.play();
+
 }
 
 update(){
