@@ -123,5 +123,3 @@ class Boss extends Phaser.GameObjects.Sprite {
 /* END OF COMPILED CODE */
 
 // You can write more code here
-	/* END-USER-CODE */
-}
