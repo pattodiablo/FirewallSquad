@@ -19,6 +19,11 @@
                 "key": "Boss"
             },
             {
+                "url": "assets/botonera.png",
+                "type": "image",
+                "key": "botonera"
+            },
+            {
                 "url": "assets/creditos.png",
                 "type": "image",
                 "key": "creditos"
@@ -27,11 +32,6 @@
                 "url": "src/scenes/Creditos.js",
                 "type": "sceneFile",
                 "key": "Creditos"
-            },
-            {
-                "url": "assets/dino.png",
-                "key": "dino",
-                "type": "image"
             },
             {
                 "url": [
@@ -130,6 +130,13 @@
                 "key": "GameOver"
             },
             {
+                "url": [
+                    "src/prefabs/GameOverAnimation.js"
+                ],
+                "type": "scripts",
+                "key": "GameOverAnimation"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"
@@ -164,6 +171,11 @@
                 ],
                 "type": "audio",
                 "key": "laser_shot"
+            },
+            {
+                "url": "assets/logo.png",
+                "type": "image",
+                "key": "logo"
             },
             {
                 "url": "assets/player.png",
@@ -238,6 +250,11 @@
                 ],
                 "type": "audio",
                 "key": "soundtrack01"
+            },
+            {
+                "url": "assets/splash_art.png",
+                "type": "image",
+                "key": "splash_art"
             },
             {
                 "url": [

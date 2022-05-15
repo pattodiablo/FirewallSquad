@@ -126,24 +126,13 @@
             "isStroked": true,
             "width": 70,
             "height": 30
-        },
-        {
-            "prefabId": "27fc898d-4448-4eac-b10d-12a54c853557",
-            "id": "0aafe0a9-5eb6-4a17-87ea-7e88e269d7eb",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "hit20004",
-            "components": [],
-            "x": 124,
-            "y": 164
         }
     ],
     "plainObjects": [],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
-        "contentType": "phasereditor2d.core.scene.SceneContentType"
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
     }
 }

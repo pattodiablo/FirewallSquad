@@ -2,8 +2,8 @@
 window.addEventListener('load', function () {
 
 	var game = new Phaser.Game({
-		width: 3000,
-		height: 3000,
+		width: document.body.clientWidth,
+		height:  document.body.clientHeight,
 		type: Phaser.AUTO,
         backgroundColor: "#242424",
 		physics: {
@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
 			arcade: {
 				fps: 60,
 				gravity: { y: 0 },
-				debug: true				
+				debug: false				
 			}			
 		},
 		scale: {

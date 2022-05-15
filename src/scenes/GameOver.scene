@@ -8,18 +8,6 @@
     },
     "displayList": [
         {
-            "type": "Text",
-            "id": "1f7be749-9343-410a-a545-d9527ba4bedf",
-            "label": "gameOverText",
-            "scope": "CLASS",
-            "components": [],
-            "x": 237,
-            "y": 212,
-            "text": "GAME OVER",
-            "align": "center",
-            "fontSize": "54px"
-        },
-        {
             "type": "Sprite",
             "id": "d5f365de-6f4a-4524-b4e4-980e240503d5",
             "label": "jugarBtn",
@@ -28,8 +16,21 @@
             "texture": {
                 "key": "rejugarBtn"
             },
-            "x": 363,
-            "y": 317
+            "x": 373,
+            "y": 391
+        },
+        {
+            "prefabId": "5870f9b6-9029-4622-a1fa-bcc4dc2e3a57",
+            "id": "19a1ed49-3b17-4f29-9788-b380acf4d7e1",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "gameOverAnim",
+            "scope": "CLASS",
+            "components": [],
+            "x": 369,
+            "y": 224
         }
     ],
     "plainObjects": [],
