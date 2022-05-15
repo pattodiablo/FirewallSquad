@@ -25,7 +25,7 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 		this.setScale(0.1)
 		this.animarNacimiento()
 
-		this.vel = Phaser.Math.Between(50,200);
+		this.vel = Phaser.Math.Between(80,200);
 		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
 		this.enemy_destroy.loop = false;
 	}
