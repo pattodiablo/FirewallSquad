@@ -135,13 +135,15 @@ class Level extends Phaser.Scene {
 		this.enemyRatio = 10;
 		this.IswaveActive = true;
 
-		this.createEnemy1Timer = this.time.addEvent({
+		this.createEnemyTimer = this.time.addEvent({
 			delay: 1500,                // ms
-			callback: this.waveController,
+			callback: this.waveVerifier,
 			//args: [],
 			callbackScope: this,
 			loop: true
 		});
+		
+		this.waveLauncher();
 
 		
 		this.createShieldsTimer = this.time.addEvent({
@@ -169,7 +171,8 @@ class Level extends Phaser.Scene {
 		this.counter.text=this.player.score;
 	}
 
-	waveController(){
+	waveLauncher(){
+		console.log('estoy en WaveController');
 		this.totalEnemies = this.dificulty*this.enemyRatio;
 		console.log("this.totalEnemies "+this.totalEnemies);
 		console.log("this.EnemiesDestroyed " + this.EnemiesDestroyed);
@@ -178,13 +181,18 @@ class Level extends Phaser.Scene {
 			console.log('lanzaWave IswaveActive ' + this.IswaveActive);
 			this.IswaveActive = false;
 		}
-		if(this.EnemiesDestroyed == this.totalEnemies){
+		
+	
+
+	}
+
+	waveVerifier(){
+		if(this.EnemiesDestroyed >= this.totalEnemies){
 			this.dificulty++;
 			console.log('Incremente Dificultad '+this.dificulty);
 			this.IswaveActive = true;
+			this.waveLauncher();
 		}
-	
-
 	}
 	lanzarWave(){
 		var Nenemies1 = Phaser.Math.Between(1,this.totalEnemies/2);
@@ -199,7 +207,7 @@ class Level extends Phaser.Scene {
 			callback: this.crearEnemy1,
 			//args: [],
 			callbackScope: this,
-			repeat: Nenemies1
+			repeat: Nenemies1-1
 		});
 
 		this.createEnemy2Timer = this.time.addEvent({
@@ -207,7 +215,7 @@ class Level extends Phaser.Scene {
 			callback: this.crearEnemy2,
 			//args: [],
 			callbackScope: this,
-			repeat: Nenemies2
+			repeat: Nenemies2-1
 		});
 
 		this.createEnemy3Timer = this.time.addEvent({
@@ -215,7 +223,7 @@ class Level extends Phaser.Scene {
 			callback: this.crearEnemy3,
 			//args: [],
 			callbackScope: this,
-			repeat: Nenemies3
+			repeat: Nenemies3-1
 		});
 
 		this.createEnemy4Timer = this.time.addEvent({
@@ -223,7 +231,7 @@ class Level extends Phaser.Scene {
 			callback: this.crearEnemy4,
 			//args: [],
 			callbackScope: this,
-			repeat: Nenemies4
+			repeat: Nenemies4-1
 		});
 
 		this.createEnemy5Timer = this.time.addEvent({
@@ -231,7 +239,7 @@ class Level extends Phaser.Scene {
 			callback: this.crearEnemy5,
 			//args: [],
 			callbackScope: this,
-			repeat: Nenemies5
+			repeat: Nenemies5-1
 		});
 	}
 
