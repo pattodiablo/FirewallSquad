@@ -26,6 +26,8 @@ class Enemy2 extends Phaser.GameObjects.Sprite {
 		this.animarNacimiento()
 
 		this.vel = Phaser.Math.Between(50,200);
+		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
+		this.enemy_destroy.loop = false;
 
 	}
 
@@ -71,10 +73,11 @@ class Enemy2 extends Phaser.GameObjects.Sprite {
 	enemyDestroy(bullet,enemy){
 		//poner sonido
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.body.enable=false;
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
-
+	
 		bullet.particles.destroy();
 		bullet.destroy();
 		var destroyTimer = enemy.scene.time.addEvent({
@@ -95,6 +98,7 @@ class Enemy2 extends Phaser.GameObjects.Sprite {
 
 	playerCollide(player,enemy){
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.scene.EnemiesDestroyed++;
 		enemy.body.enable=false;
 		//console.log(enemy.scene.EnemiesDestroyed);

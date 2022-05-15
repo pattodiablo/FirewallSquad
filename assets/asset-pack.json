@@ -19,9 +19,33 @@
                 "key": "Boss"
             },
             {
+                "url": "assets/creditos.png",
+                "type": "image",
+                "key": "creditos"
+            },
+            {
+                "url": "src/scenes/Creditos.js",
+                "type": "sceneFile",
+                "key": "Creditos"
+            },
+            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/enemy_destroy.mp3"
+                ],
+                "type": "audio",
+                "key": "enemy_destroy"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/enemy_destroy2.mp3"
+                ],
+                "type": "audio",
+                "key": "enemy_destroy2"
             },
             {
                 "url": "assets/enemy1.png",
@@ -118,6 +142,13 @@
                 "key": "Heart"
             },
             {
+                "url": [
+                    "assets/audio/sfx/hurt.mp3"
+                ],
+                "type": "audio",
+                "key": "hurt"
+            },
+            {
                 "url": "src/scenes/Inicio.js",
                 "type": "sceneFile",
                 "key": "Inicio"
@@ -126,6 +157,13 @@
                 "url": "assets/jugarBtn.png",
                 "type": "image",
                 "key": "jugarBtn"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/laser_shot.mp3"
+                ],
+                "type": "audio",
+                "key": "laser_shot"
             },
             {
                 "url": "assets/player.png",
@@ -164,11 +202,23 @@
                 "key": "propsNew"
             },
             {
+                "url": "assets/rejugarBtn.png",
+                "type": "image",
+                "key": "rejugarBtn"
+            },
+            {
                 "url": [
                     "src/prefabs/Shield.js"
                 ],
                 "type": "scripts",
                 "key": "Shield"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/shield_up.mp3"
+                ],
+                "type": "audio",
+                "key": "shield_up"
             },
             {
                 "url": "assets/ShieldImg.png",
@@ -195,6 +245,13 @@
                 ],
                 "type": "audio",
                 "key": "splash_screen"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/travel.mp3"
+                ],
+                "type": "audio",
+                "key": "travel"
             }
         ]
     },

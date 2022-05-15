@@ -25,9 +25,15 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 		//this.setScale(0.1)
 		//this.animarNacimiento()
 
-		this.body.velocity.x = Phaser.Math.Between(50,100);
+		//this.body.velocity.x = Phaser.Math.Between(50,100);
 		this.initY=this.y;
 		
+		this.setScale(0.1)
+		this.animarNacimiento()
+
+		
+		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
+		this.enemy_destroy.loop = false;
 		
 	}
 
@@ -35,6 +41,7 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 		if(this.active){
 		//this.angle+=180/3000; 
 		//this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
+	this.x+=2;
 	this.angle+=2;
 	this.y = this.initY + 400*Math.sin(this.angle*Math.PI/180);	
 	}
@@ -75,6 +82,7 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 	enemyDestroy(bullet,enemy){
 		//poner sonido
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.body.enable=false;
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
@@ -99,9 +107,10 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 
 	playerCollide(player,enemy){
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.scene.EnemiesDestroyed++;
 		enemy.body.enable=false;
-		console.log(enemy.scene.EnemiesDestroyed);
+		//console.log(enemy.scene.EnemiesDestroyed);
 		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
 		callback: function(){
@@ -120,3 +129,7 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 
 	/* END-USER-CODE */
 }
+
+/* END OF COMPILED CODE */
+
+// You can write more code here

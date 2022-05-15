@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class GameOver extends Phaser.Scene {
+class Creditos extends Phaser.Scene {
 
 	constructor() {
-		super("GameOver");
+		super("Creditos");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -16,22 +16,21 @@ class GameOver extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// gameOverText
-		const gameOverText = this.add.text(237, 212, "", {});
-		gameOverText.text = "GAME OVER";
-		gameOverText.setStyle({ "align": "center", "fontSize": "54px" });
+		// background
+		const background = this.add.tileSprite(0, 0, 64, 64, "background");
+		background.setOrigin(0, 0);
 
 		// jugarBtn
-		const jugarBtn = this.add.sprite(363, 317, "rejugarBtn");
+		const jugarBtn = this.add.sprite(400, 463, "jugarBtn");
 
-		this.gameOverText = gameOverText;
+		this.background = background;
 		this.jugarBtn = jugarBtn;
 
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Phaser.GameObjects.Text} */
-	gameOverText;
+	/** @type {Phaser.GameObjects.TileSprite} */
+	background;
 	/** @type {Phaser.GameObjects.Sprite} */
 	jugarBtn;
 
@@ -42,16 +41,17 @@ class GameOver extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
-		this.scene.scene.cameras.main.fadeIn(1000);
-		this.gameOverText.setOrigin(0.5,0.5);
-		this.gameOverText.x=this.scene.scene.cameras.main.centerX;
-		this.jugarBtn.x=this.scene.scene.cameras.main.centerX;
+
+		this.jugarBtn.x=this.cameras.main.centerX;
 		this.jugarBtn.setInteractive().on('pointerup', this.iniciarJuego,this);
+
+		this.background.width=3000;
+		this.background.height=3000;
 	}
 
 	iniciarJuego(){
 
-		window.location.reload();
+		this.scene.start('Level');
 	}
 
 	/* END-USER-CODE */
