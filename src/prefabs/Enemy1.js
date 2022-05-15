@@ -17,6 +17,7 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 	/* START-USER-CODE */
 
 	create(){
+		this.name=this.texture.key;
 		this.scene.physics.world.enableBody(this);
 
 		this.scene.physics.add.overlap(this.scene.player, this,this.playerCollide);
@@ -52,7 +53,20 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 		});
 		entrandoTimeline.play();
 
+		var entrandoTimeline = this.scene.tweens.createTimeline();
+		entrandoTimeline.add({
+			targets: this,
+			alpha: 0.5,
+			duration: 200,
+			yoyo:true,
+			ease: 'Linear',
+			repeat: -1
+
+		});
+		entrandoTimeline.play();
+
 	}
+
 
 	enemyDestroy(bullet,enemy){
 		//poner sonido
@@ -60,7 +74,7 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
 		console.log(enemy.scene.EnemiesDestroyed);
-
+		bullet.destroy();
 		var destroyTimer = enemy.scene.time.addEvent({
 			delay: 500,                // ms
 			callback: function(){
@@ -79,9 +93,9 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 
 	playerCollide(player,enemy){
 		enemy.play("explosion1",true);
-	enemy.scene.EnemiesDestroyed++;
-	console.log(enemy.scene.EnemiesDestroyed);
-	var destroyTimer = enemy.scene.time.addEvent({
+		enemy.scene.EnemiesDestroyed++;
+		console.log(enemy.scene.EnemiesDestroyed);
+		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
 		callback: function(){
 
@@ -93,6 +107,7 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 	});
 
 		player.handleEnemyCollition();
+		player.handleScore(enemy);
 		
 	}
 

@@ -52,7 +52,20 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 		});
 		pulsa.play();
 
+		var entrandoTimeline = this.scene.tweens.createTimeline();
+		entrandoTimeline.add({
+			targets: this,
+			angle: 360,
+			duration: 3000,
+		
+			ease: 'Linear',
+			repeat: -1
+
+		});
+		entrandoTimeline.play();
+
 	}
+	
 	
 	enemyDestroy(bullet,enemy){
 		//poner sonido
@@ -60,7 +73,7 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
 		console.log(enemy.scene.EnemiesDestroyed);
-
+		bullet.destroy();
 		var destroyTimer = enemy.scene.time.addEvent({
 			delay: 500,                // ms
 			callback: function(){
