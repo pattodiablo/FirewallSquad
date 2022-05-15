@@ -58,10 +58,14 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 		//poner sonido
 	
 		enemy.scene.player.handleScore(enemy);
+		enemy.scene.EnemiesDestroyed++;
+		console.log(enemy.scene.EnemiesDestroyed);
 		enemy.destroy();
 	}
 
 	playerCollide(player,enemy){
+	enemy.scene.EnemiesDestroyed++;
+	console.log(enemy.scene.EnemiesDestroyed);
 	enemy.destroy();
 		player.handleEnemyCollition();
 		
