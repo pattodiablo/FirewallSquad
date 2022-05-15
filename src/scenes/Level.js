@@ -173,25 +173,27 @@ class Level extends Phaser.Scene {
 		this.totalEnemies = this.dificulty*this.enemyRatio;
 		console.log("this.totalEnemies "+this.totalEnemies);
 		console.log("this.EnemiesDestroyed " + this.EnemiesDestroyed);
+		if(this.IswaveActive){
+			this.lanzarWave();
+			console.log('lanzaWave IswaveActive ' + this.IswaveActive);
+			this.IswaveActive = false;
+		}
 		if(this.EnemiesDestroyed == this.totalEnemies){
 			this.dificulty++;
 			console.log('Incremente Dificultad '+this.dificulty);
 			this.IswaveActive = true;
 		}
-		if(this.IswaveActive){
-			this.lanzarWave();
-			console.log('lanzaWave');
-			this.IswaveActive = false;
-		}
+	
 
 	}
 	lanzarWave(){
-		var Nenemies1 = this.totalEnemies/Phaser.Math.Between(1,5);
-		var Nenemies2 = this.totalEnemies/Phaser.Math.Between(1,Phaser.Math.Between(1,Nenemies1));
-		var Nenemies3 = this.totalEnemies/Phaser.Math.Between(1,Phaser.Math.Between(1,Nenemies2));
-		var Nenemies4 = this.totalEnemies/Phaser.Math.Between(1,Phaser.Math.Between(1,Nenemies3));
+		var Nenemies1 = Phaser.Math.Between(1,this.totalEnemies/2);
+		var Nenemies2 = Phaser.Math.Between(1,Phaser.Math.Between(1,Nenemies1));
+		var Nenemies3 = Phaser.Math.Between(1,Phaser.Math.Between(1,Nenemies2));
+		var Nenemies4 = Phaser.Math.Between(1,Phaser.Math.Between(1,Nenemies3));
 		var Nenemies5 = this.totalEnemies - (Nenemies1+Nenemies2+Nenemies3+Nenemies4);
 		console.log("this.totalEnemies " + this.totalEnemies);
+		
 		this.createEnemy1Timer = this.time.addEvent({
 			delay: 1500,                // ms
 			callback: this.crearEnemy1,
