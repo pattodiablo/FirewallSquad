@@ -29,6 +29,9 @@ create(){
     this.body.drag=0.99;
     this.body.setMaxVelocity(400);
 	this.defaultDamping = 0;
+	this.gotShield=false;
+	this.shieldPower=3;
+	this.isShieldActive=false;
 
 	console.log(this.body);
 
@@ -87,7 +90,8 @@ console.log("trying shoot")
 }
 
 handleScore(enemy){
-	switch (enemy.texture.key) {
+
+	switch (enemy.name) {
 		case "enemy1":
 			this.score+=10;
 			break;
@@ -119,26 +123,43 @@ handleScore(enemy){
 }
 
 handleEnemyCollition(){
-	
-	this.life--;
-	switch (this.life) {
-		case 2:
-			this.scene.heart3.visible=false
-			break;
-		case 1:
-				this.scene.heart2.visible=false
+	this.scene.cameras.main.shake(60);
+	this.scene.cameras.main.flash(200, 172, 29, 41);
+	if(this.isShieldActive){
+		this.shieldPower--;
+		console.log(this.shieldPower)
+		if(this.shieldPower<=0){
+			this.isShieldActive=false;
+			console.log(this.scene.ShipShield)
+			this.scene.ShipShield.destroy();
+		}
+
+	}else{
+
+		this.life--;
+		switch (this.life) {
+			case 2:
+				this.scene.heart3.visible=false
 				break;
-		case 0:
-				this.scene.heart1.visible=false
-				//ir a gameOVer
+			case 1:
+					this.scene.heart2.visible=false
+					break;
+			case 0:
+					this.scene.heart1.visible=false
+					//ir a gameOVer
+					break;
+		
+			default:
 				break;
-	
-		default:
-			break;
+		}
 	}
+	
 }
 
 update(){
+
+
+
 	this.defaultDamping++;
 	if(this.defaultDamping>=1.1){
 		this.defaultDamping=1.1;
@@ -188,6 +209,15 @@ this.body.setFriction(10,10);
 		this.defaultDamping=1;
 		this.scene.physics.velocityFromRotation(this.rotation, 350, this.body.velocity);
     }
+
+	if(this.gotShield){
+		console.log("aparecer escudo")
+		const shieldImg = new ShipShield(this.scene, this.x, this.y);
+		this.scene.add.existing(shieldImg);
+		this.isShieldActive=true;
+		this.gotShield=false;
+	}
+	
     
 }
 

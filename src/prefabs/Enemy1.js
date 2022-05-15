@@ -17,6 +17,7 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 	/* START-USER-CODE */
 
 	create(){
+		this.name=this.texture.key;
 		this.scene.physics.world.enableBody(this);
 
 		this.scene.physics.add.overlap(this.scene.player, this,this.playerCollide);
@@ -52,22 +53,64 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 		});
 		entrandoTimeline.play();
 
+		var entrandoTimeline = this.scene.tweens.createTimeline();
+		entrandoTimeline.add({
+			targets: this,
+			alpha: 0.5,
+			duration: 200,
+			yoyo:true,
+			ease: 'Linear',
+			repeat: -1
+
+		});
+		entrandoTimeline.play();
+
 	}
+
 
 	enemyDestroy(bullet,enemy){
 		//poner sonido
-	
+		enemy.play("explosion1",true);
+		enemy.body.enable=false;
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
-		console.log(enemy.scene.EnemiesDestroyed);
-		enemy.destroy();
+	
+		bullet.particles.destroy();
+		bullet.destroy();
+		var destroyTimer = enemy.scene.time.addEvent({
+			delay: 500,                // ms
+			callback: function(){
+
+				enemy.destroy();
+			},
+			//args: [],
+			callbackScope: this,
+			loop: false
+		});
+
+		
+		
+		
 	}
 
 	playerCollide(player,enemy){
-	enemy.scene.EnemiesDestroyed++;
-	console.log(enemy.scene.EnemiesDestroyed);
-	enemy.destroy();
+		enemy.play("explosion1",true);
+		enemy.scene.EnemiesDestroyed++;
+		enemy.body.enable=false;
+		console.log(enemy.scene.EnemiesDestroyed);
+		var destroyTimer = enemy.scene.time.addEvent({
+		delay: 500,                // ms
+		callback: function(){
+
+			enemy.destroy();
+		},
+		//args: [],
+		callbackScope: this,
+		loop: false
+	});
+
 		player.handleEnemyCollition();
+		player.handleScore(enemy);
 		
 	}
 
