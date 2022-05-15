@@ -29,6 +29,8 @@ class Boss extends Phaser.GameObjects.Sprite {
 		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
 		this.enemy_destroy.loop = false;
 		this.life = 50;
+
+		
 	}
 
 	update(){
