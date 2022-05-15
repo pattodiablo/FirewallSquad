@@ -9,6 +9,8 @@ window.addEventListener('load', function () {
 		physics: {
 			default: "arcade",
 			arcade: {
+				fps: 60,
+				gravity: { y: 0 },
 				debug: false				
 			}			
 		},

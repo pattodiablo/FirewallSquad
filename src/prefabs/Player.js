@@ -24,9 +24,12 @@ create(){
 	this.body.drag=300;
 	this.life=3;
 	this.score=0;
+	this.body.physicsType=0;
 	this.body.setDamping(true);
-	this.body.drag=0.99;
-	
+    this.body.drag=0.99;
+    this.body.setMaxVelocity(400);
+	this.defaultDamping = 0;
+
 	console.log(this.body);
 
 	this.cursors = this.scene.input.keyboard.addKeys(
@@ -38,6 +41,44 @@ create(){
 		space:Phaser.Input.Keyboard.KeyCodes.SPACE
 		
 		});
+
+		this.crearParticulas();
+}
+
+crearParticulas() {
+	var k = 3;
+	var rose = {
+		getPoints: function (quantity, stepRate) {
+			if (!stepRate) {
+				stepRate = Phaser.Math.PI2 / quantity;
+			}
+
+			var input = Phaser.Utils.Array.NumberArrayStep(0, Phaser.Math.PI2, stepRate);
+			var output = new Array(input.length);
+
+			for (var i = 0; i < input.length; i++) {
+				var angle = input[i];
+				output[i] = new Phaser.Math.Vector2().setToPolar(angle, 10 * Math.cos(k * angle));
+			}
+
+			return output;
+		}
+	};
+	this.particles = this.scene.add.particles('flares');
+	var tree = new Phaser.Geom.Triangle.BuildEquilateral(0, -10, 40);
+	this.particles.createEmitter({
+		frame: "flare20000",
+		scale: { start: 0.4, end: 0.1 },
+		blendMode: 'ADD',
+		lifespan: 300,
+		//	emitZone: { type: 'edge', source: rose, quantity: 360 },
+		follow: this
+	});
+	var supaCurrentDepth = this.depth;
+
+	this.setDepth(supaCurrentDepth+1);
+
+
 }
 
 shoot(){
@@ -98,7 +139,14 @@ handleEnemyCollition(){
 }
 
 update(){
+	this.defaultDamping++;
+	if(this.defaultDamping>=1.1){
+		this.defaultDamping=1.1;
+	
+	}
 
+	this.body.velocity.x=this.body.velocity.x/this.defaultDamping;
+	this.body.velocity.y=this.body.velocity.y/this.defaultDamping;
 
 this.body.setFriction(10,10);
 
@@ -137,6 +185,7 @@ this.body.setFriction(10,10);
 
     if (this.cursors.up.isDown)
     {
+		this.defaultDamping=1;
 		this.scene.physics.velocityFromRotation(this.rotation, 350, this.body.velocity);
     }
     

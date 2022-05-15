@@ -107,7 +107,7 @@ class Level extends Phaser.Scene {
 		this.playerBullets=[];
 		this.rectangle.x=document.body.clientWidth-50;
 		this.rectangle.setScrollFactor(0, 0);
-		this.counter.x=document.body.clientWidth-77;
+		this.counter.x=document.body.clientWidth-70;
 		this.counter.setScrollFactor(0, 0);
 		this.score.x=document.body.clientWidth-160;
 		this.score.setScrollFactor(0, 0);
