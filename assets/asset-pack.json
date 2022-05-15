@@ -84,6 +84,12 @@
                 "key": "Enemy5"
             },
             {
+                "atlasURL": "assets/atlas/flares.json",
+                "textureURL": "assets/atlas/flares.png",
+                "type": "atlas",
+                "key": "flares"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"
