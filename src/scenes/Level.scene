@@ -134,16 +134,16 @@
             "height": 30
         },
         {
-            "prefabId": "4f2ebcc3-86dd-4e1f-92ce-d4983ed9f73d",
-            "id": "df0d8dcf-c2ef-47f4-869e-f132ce56e2e3",
+            "prefabId": "f0255297-93b4-44ef-aad3-82942b246491",
+            "id": "1c974b96-e6a4-4ad6-bad0-51e1e3bb50ab",
             "unlock": [
                 "x",
                 "y"
             ],
-            "label": "enemy3",
+            "label": "enemy2",
             "components": [],
-            "x": 400,
-            "y": 250
+            "x": 416,
+            "y": 243
         }
     ],
     "plainObjects": [],

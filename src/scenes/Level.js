@@ -60,9 +60,9 @@ class Level extends Phaser.Scene {
 		rectangle.isStroked = true;
 		rectangle.strokeColor = 16711752;
 
-		// enemy3
-		const enemy3 = new Enemy3(this, 400, 250);
-		this.add.existing(enemy3);
+		// enemy2
+		const enemy2 = new Enemy2(this, 416, 243);
+		this.add.existing(enemy2);
 
 		this.background = background;
 		this.player = player;

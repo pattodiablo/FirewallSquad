@@ -16,11 +16,13 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 	/* START-USER-CODE */
 
 	create(){
+		this.name=this.texture.key;
 		this.scene.physics.world.enableBody(this);
 		this.scene.physics.add.overlap(this.scene.player, this,this.playerCollide);
 		this.scene.physics.add.overlap(this.scene.playerBullets, this,this.enemyDestroy);
 		this.setScale(1)
 		this.animarNacimiento()
+		
 	}
 
 	animarNacimiento(){
@@ -77,9 +79,9 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 
 	playerCollide(player,enemy){
 		enemy.play("explosion1",true);
-	enemy.scene.EnemiesDestroyed++;
-	console.log(enemy.scene.EnemiesDestroyed);
-	var destroyTimer = enemy.scene.time.addEvent({
+		enemy.scene.EnemiesDestroyed++;
+		console.log(enemy.scene.EnemiesDestroyed);
+		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
 		callback: function(){
 

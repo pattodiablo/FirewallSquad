@@ -2,6 +2,7 @@
     "id": "f0255297-93b4-44ef-aad3-82942b246491",
     "sceneType": "PREFAB",
     "settings": {
+        "superClassName": "Enemy3",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": ""
