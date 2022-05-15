@@ -31,8 +31,8 @@ class Enemy2 extends Phaser.GameObjects.Sprite {
 
 	update(){
 		if(this.active){
-		//	this.angle=90+(180/Math.PI)*Phaser.Math.Angle.Between(this.x,this.y,this.scene.player.x,this.scene.player.y); 
-		//	this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
+			this.angle=(180/Math.PI)*Phaser.Math.Angle.Between(this.x,this.y,this.scene.player.x,this.scene.player.y); 
+			this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
 		}
 
 
@@ -97,7 +97,7 @@ class Enemy2 extends Phaser.GameObjects.Sprite {
 		enemy.play("explosion1",true);
 		enemy.scene.EnemiesDestroyed++;
 		enemy.body.enable=false;
-		console.log(enemy.scene.EnemiesDestroyed);
+		//console.log(enemy.scene.EnemiesDestroyed);
 		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
 		callback: function(){

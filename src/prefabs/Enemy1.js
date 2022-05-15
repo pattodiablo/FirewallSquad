@@ -97,7 +97,7 @@ class Enemy1 extends Phaser.GameObjects.Sprite {
 		enemy.play("explosion1",true);
 		enemy.scene.EnemiesDestroyed++;
 		enemy.body.enable=false;
-		console.log(enemy.scene.EnemiesDestroyed);
+		//console.log(enemy.scene.EnemiesDestroyed);
 		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
 		callback: function(){
