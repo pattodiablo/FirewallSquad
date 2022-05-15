@@ -81,6 +81,8 @@
             "components": [],
             "x": 602,
             "y": 15,
+            "originX": 0.5,
+            "originY": 0.5,
             "text": "SCORE",
             "fontFamily": "KANIT",
             "fontSize": "20px",
@@ -95,6 +97,8 @@
             "components": [],
             "x": 342,
             "y": 413,
+            "originX": 0.5,
+            "originY": 0.5,
             "text": "ULTIMATE DEFENSE",
             "align": "center",
             "fontFamily": "KANIT",
@@ -109,6 +113,8 @@
             "components": [],
             "x": 685,
             "y": 18,
+            "originX": 0.5,
+            "originY": 0.5,
             "text": "00000",
             "fontFamily": "KANIT",
             "color": "#34eacdff"
@@ -126,12 +132,25 @@
             "isStroked": true,
             "width": 70,
             "height": 30
+        },
+        {
+            "prefabId": "f0255297-93b4-44ef-aad3-82942b246491",
+            "id": "1c974b96-e6a4-4ad6-bad0-51e1e3bb50ab",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "enemy2",
+            "components": [],
+            "x": 416,
+            "y": 243
         }
     ],
     "plainObjects": [],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
-        "contentType": "phasereditor2d.core.scene.SceneContentType"
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
     }
 }

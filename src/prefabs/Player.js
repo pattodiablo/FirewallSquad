@@ -87,7 +87,8 @@ console.log("trying shoot")
 }
 
 handleScore(enemy){
-	switch (enemy.texture.key) {
+	console.log(enemy)
+	switch (enemy.name) {
 		case "enemy1":
 			this.score+=10;
 			break;

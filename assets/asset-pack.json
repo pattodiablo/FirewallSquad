@@ -84,6 +84,17 @@
                 "key": "Enemy5"
             },
             {
+                "atlasURL": "assets/atlas/explosion.json",
+                "textureURL": "assets/atlas/explosion.png",
+                "type": "atlas",
+                "key": "explosion"
+            },
+            {
+                "url": "assets/animations/explosion1.json",
+                "type": "animation",
+                "key": "explosion1"
+            },
+            {
                 "atlasURL": "assets/atlas/flares.json",
                 "textureURL": "assets/atlas/flares.png",
                 "type": "atlas",
@@ -114,6 +125,12 @@
                 "key": "Player"
             },
             {
+                "atlasURL": "assets/atlas/playerAnimations.json",
+                "textureURL": "assets/atlas/playerAnimations.png",
+                "type": "atlas",
+                "key": "playerAnimations"
+            },
+            {
                 "url": "assets/playerBullet.png",
                 "type": "image",
                 "key": "playerBullet"
@@ -124,6 +141,12 @@
                 ],
                 "type": "scripts",
                 "key": "PlayerBullet"
+            },
+            {
+                "atlasURL": "assets/atlas/propsNew.json",
+                "textureURL": "assets/atlas/propsNew.png",
+                "type": "atlas",
+                "key": "propsNew"
             }
         ]
     },
