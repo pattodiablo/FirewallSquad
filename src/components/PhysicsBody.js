@@ -3,24 +3,27 @@
 
 /* START OF COMPILED CODE */
 
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
+
 class PhysicsBody extends EventComponent {
-	
+
 	constructor(gameObject) {
 		super(gameObject);
-		
+
 		this.gameObject = gameObject;
 		gameObject["__PhysicsBody"] = this;
-		
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
-	
+
 	/** @returns {PhysicsBody} */
 	static getComponent(gameObject) {
 		return gameObject["__PhysicsBody"];
 	}
-	
+
 	/** @type {Phaser.GameObjects.Image} */
 	gameObject;
 	/** @type {number} */
@@ -31,7 +34,7 @@ class PhysicsBody extends EventComponent {
 	bodyWidth = 0;
 	/** @type {number} */
 	bodyHeight = 0;
-	
+
 	/* START-USER-CODE */
 
 	start() {

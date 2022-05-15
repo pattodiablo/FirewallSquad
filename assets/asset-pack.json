@@ -84,6 +84,23 @@
                 "key": "Enemy5"
             },
             {
+                "atlasURL": "assets/atlas/explosion.json",
+                "textureURL": "assets/atlas/explosion.png",
+                "type": "atlas",
+                "key": "explosion"
+            },
+            {
+                "url": "assets/animations/explosion1.json",
+                "type": "animation",
+                "key": "explosion1"
+            },
+            {
+                "atlasURL": "assets/atlas/flares.json",
+                "textureURL": "assets/atlas/flares.png",
+                "type": "atlas",
+                "key": "flares"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"
@@ -94,6 +111,16 @@
                 ],
                 "type": "scripts",
                 "key": "Heart"
+            },
+            {
+                "url": "src/scenes/Inicio.js",
+                "type": "sceneFile",
+                "key": "Inicio"
+            },
+            {
+                "url": "assets/jugarBtn.png",
+                "type": "image",
+                "key": "jugarBtn"
             },
             {
                 "url": "assets/player.png",
@@ -108,6 +135,12 @@
                 "key": "Player"
             },
             {
+                "atlasURL": "assets/atlas/playerAnimations.json",
+                "textureURL": "assets/atlas/playerAnimations.png",
+                "type": "atlas",
+                "key": "playerAnimations"
+            },
+            {
                 "url": "assets/playerBullet.png",
                 "type": "image",
                 "key": "playerBullet"
@@ -120,8 +153,33 @@
                 "key": "PlayerBullet"
             },
             {
+                "atlasURL": "assets/atlas/propsNew.json",
+                "textureURL": "assets/atlas/propsNew.png",
+                "type": "atlas",
+                "key": "propsNew"
+            },
+            {
                 "url": [
-                    "assets/audio/music/soundtrack01.mp3"
+                    "src/prefabs/Shield.js"
+                ],
+                "type": "scripts",
+                "key": "Shield"
+            },
+            {
+                "url": "assets/ShieldImg.png",
+                "type": "image",
+                "key": "ShieldImg"
+            },
+            {
+                "url": [
+                    "src/prefabs/ShipShield.js"
+                ],
+                "type": "scripts",
+                "key": "ShipShield"
+            },
+            {
+                "url": [
+                    "assets/audio/soundtrack01.mp3"
                 ],
                 "type": "audio",
                 "key": "soundtrack01"

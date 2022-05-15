@@ -6,35 +6,28 @@
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-class StartAnimation extends EventComponent {
+class Component {
 
 	constructor(gameObject) {
-		super(gameObject);
-
 		this.gameObject = gameObject;
-		gameObject["__StartAnimation"] = this;
+		gameObject["__Component"] = this;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 
-	/** @returns {StartAnimation} */
+	/** @returns {Component} */
 	static getComponent(gameObject) {
-		return gameObject["__StartAnimation"];
+		return gameObject["__Component"];
 	}
 
-	/** @type {Phaser.GameObjects.Sprite} */
+	/** @type {Phaser.GameObjects.Image} */
 	gameObject;
-	/** @type {string} */
-	animationKey = "";
 
 	/* START-USER-CODE */
 
-	start() {
-
-		this.gameObject.play(this.animationKey);
-	}
+	// Write your code here.
 
 	/* END-USER-CODE */
 }

@@ -1,0 +1,171 @@
+{
+    "anims": [
+        {
+            "key": "explosion1",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "explosion",
+                    "frame": "EXP_01.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_02.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_03.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_04.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_05.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_06.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_07.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_08.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_09.png",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "explosion",
+                    "frame": "EXP_10.png",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 32,
+            "skipMissedFrames": true,
+            "showOnStart": true,
+            "hideOnComplete": true
+        },
+        {
+            "key": "hit1",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit10000",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit10001",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit10002",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit10003",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit10004",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "showOnStart": true,
+            "hideOnComplete": true
+        },
+        {
+            "key": "hit2",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit30000",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit30001",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit30002",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit30003",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit30004",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit30005",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "playerAnimations",
+                    "frame": "hit30006",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "showOnStart": true,
+            "hideOnComplete": true
+        }
+    ],
+    "globalTimeScale": 1,
+    "meta": {
+        "app": "Phaser Editor 2D v3",
+        "contentType": "Phaser v3 Animations"
+    }
+}
