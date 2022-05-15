@@ -101,6 +101,11 @@
                 "key": "flares"
             },
             {
+                "url": "src/scenes/GameOver.js",
+                "type": "sceneFile",
+                "key": "GameOver"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"

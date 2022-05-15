@@ -200,8 +200,8 @@ morirAnimation(){
 
 			this.scene.cameras.main.fadeOut(2000);
 			this.scene.cameras.main.once('camerafadeoutcomplete', function () {	
-				
-			console.log("voy a cambiar de escena")
+
+				this.scene.scene.start('GameOver');
 				
 					}, this);
 		},
