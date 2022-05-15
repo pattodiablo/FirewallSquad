@@ -22,7 +22,8 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 		this.scene.physics.add.overlap(this.scene.playerBullets, this,this.enemyDestroy);
 		this.setScale(1)
 		this.animarNacimiento()
-		
+		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
+		this.enemy_destroy.loop = false;
 	}
 
 	animarNacimiento(){
