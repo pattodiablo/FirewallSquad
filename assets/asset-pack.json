@@ -113,6 +113,11 @@
                 "key": "Heart"
             },
             {
+                "url": "src/scenes/Inicio.js",
+                "type": "sceneFile",
+                "key": "Inicio"
+            },
+            {
                 "url": "assets/jugarBtn.png",
                 "type": "image",
                 "key": "jugarBtn"

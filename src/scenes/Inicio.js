@@ -34,8 +34,14 @@ class Inicio extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.jugarBtn.x=this.cameras.main.centerX;
+		this.jugarBtn.setInteractive().on('pointerup', this.iniciarJuego,this);
 	}
 
+	iniciarJuego(){
+
+		this.scene.start('Level');
+	}
 	/* END-USER-CODE */
 }
 

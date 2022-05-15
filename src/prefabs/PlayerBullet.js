@@ -20,6 +20,7 @@ class PlayerBullet extends Phaser.GameObjects.Sprite {
 		this.scene.physics.world.enableBody(this);
 		this.scene.physics.velocityFromRotation(this.scene.player.rotation, 800, this.body.velocity);
 		this.crearParticulas();
+		this.rotation=this.scene.player.rotation;
 	}
 
 	crearParticulas() {
