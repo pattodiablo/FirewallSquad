@@ -16,24 +16,23 @@ class GameOver extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// gameOverText
-		const gameOverText = this.add.text(237, 212, "", {});
-		gameOverText.text = "GAME OVER";
-		gameOverText.setStyle({ "align": "center", "fontSize": "54px" });
-
 		// jugarBtn
-		const jugarBtn = this.add.sprite(363, 317, "rejugarBtn");
+		const jugarBtn = this.add.sprite(373, 391, "rejugarBtn");
 
-		this.gameOverText = gameOverText;
+		// gameOverAnim
+		const gameOverAnim = new GameOverAnimation(this, 369, 224);
+		this.add.existing(gameOverAnim);
+
 		this.jugarBtn = jugarBtn;
+		this.gameOverAnim = gameOverAnim;
 
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Phaser.GameObjects.Text} */
-	gameOverText;
 	/** @type {Phaser.GameObjects.Sprite} */
 	jugarBtn;
+	/** @type {GameOverAnimation} */
+	gameOverAnim;
 
 	/* START-USER-CODE */
 
@@ -42,9 +41,9 @@ class GameOver extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+
 		this.scene.scene.cameras.main.fadeIn(1000);
-		this.gameOverText.setOrigin(0.5,0.5);
-		this.gameOverText.x=this.scene.scene.cameras.main.centerX;
+		this.gameOverAnim.x=this.scene.scene.cameras.main.centerX;
 		this.jugarBtn.x=this.scene.scene.cameras.main.centerX;
 		this.jugarBtn.setInteractive().on('pointerup', this.iniciarJuego,this);
 	}

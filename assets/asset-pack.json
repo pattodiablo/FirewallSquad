@@ -130,6 +130,13 @@
                 "key": "GameOver"
             },
             {
+                "url": [
+                    "src/prefabs/GameOverAnimation.js"
+                ],
+                "type": "scripts",
+                "key": "GameOverAnimation"
+            },
+            {
                 "url": "assets/heart.png",
                 "type": "image",
                 "key": "heart"
