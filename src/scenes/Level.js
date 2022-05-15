@@ -150,7 +150,7 @@ class Level extends Phaser.Scene {
 			loop: true
 		});
 
-
+		
 
 
 	}
@@ -165,6 +165,7 @@ class Level extends Phaser.Scene {
 
 	update (){
 		this.counter.text=this.player.score;
+
 	}
 
 	waveLauncher(){

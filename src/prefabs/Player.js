@@ -45,6 +45,7 @@ create(){
 		
 		});
 
+
 		this.crearParticulas();
 
 		this.laser_shot = this.scene.sound.add('laser_shot');
@@ -276,6 +277,7 @@ this.body.setFriction(10,10);
 		this.defaultDamping=1;
 		this.scene.physics.velocityFromRotation(this.rotation, 350, this.body.velocity);
     }
+
 
 	if(this.gotShield && !this.isShieldActive){
 		console.log("aparecer escudo")
