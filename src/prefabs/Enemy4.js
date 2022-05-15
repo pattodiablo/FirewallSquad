@@ -71,6 +71,7 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 	enemyDestroy(bullet,enemy){
 		//poner sonido
 		enemy.play("explosion1",true);
+		enemy.body.enable=false;
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
 		console.log(enemy.scene.EnemiesDestroyed);
@@ -94,6 +95,7 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 	playerCollide(player,enemy){
 		enemy.play("explosion1",true);
 		enemy.scene.EnemiesDestroyed++;
+		enemy.body.enable=false;
 		console.log(enemy.scene.EnemiesDestroyed);
 		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
@@ -110,7 +112,6 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 		player.handleScore(enemy);
 		
 	}
-
 
 	/* END-USER-CODE */
 }
