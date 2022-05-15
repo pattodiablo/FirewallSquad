@@ -31,6 +31,13 @@
                 "key": "enemy_destroy"
             },
             {
+                "url": [
+                    "assets/audio/sfx/enemy_destroy2.mp3"
+                ],
+                "type": "audio",
+                "key": "enemy_destroy2"
+            },
+            {
                 "url": "assets/enemy1.png",
                 "type": "image",
                 "key": "enemy1"
