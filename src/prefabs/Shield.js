@@ -20,17 +20,72 @@ create(){
 	this.name=this.texture.key;
 	this.scene.physics.world.enableBody(this);
 	this.scene.physics.add.overlap(this.scene.player, this,this.playerCollide);
+	
+
+	this.animarNacimiento();
+	this.lifeTimer = this.scene.time.addEvent({
+		delay: 8000,                // ms
+		callback: function(){
+
+			this.play("hit2",true);
+
+			var destroyTimer = this.scene.time.addEvent({
+				delay: 500,                // ms
+				callback: function(){
+	
+					this.destroy();
+				},
+				//args: [],
+				callbackScope: this,
+				loop: false
+			});
+
+			
+		},
+		//args: [],
+		callbackScope: this,
+		loop: false
+	});
 
 
 }
 
+animarNacimiento(){
+
+	var entrandoTimeline = this.scene.tweens.createTimeline();
+	entrandoTimeline.add({
+		targets: this,
+		scale: 1,
+		duration: 100,
+		ease: 'Linear',
+		repeat: 0
+
+	});
+	entrandoTimeline.play();
+
+	var entrandoTimeline = this.scene.tweens.createTimeline();
+	entrandoTimeline.add({
+		targets: this,
+		alpha: 0.5,
+		scale: 1.2,
+		duration: 500,
+		yoyo:true,
+		ease: 'Linear',
+		repeat: -1
+
+	});
+	entrandoTimeline.play();
+
+}
 
 	update(){
 
 	}
 
 	playerCollide(player,Shield){
+		Shield.lifeTimer.destroy();
 		Shield.play("hit2",true);
+		Shield.body.enable=false;
 		player.gotShield=true;
 		var destroyTimer = Shield.scene.time.addEvent({
 			delay: 500,                // ms

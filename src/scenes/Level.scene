@@ -204,17 +204,6 @@
             "components": [],
             "x": 124,
             "y": 164
-        },
-        {
-            "type": "Image",
-            "id": "d63f2ec3-c62e-4d9a-8f5b-dd00899b9766",
-            "label": "shieldImg",
-            "components": [],
-            "texture": {
-                "key": "ShieldImg"
-            },
-            "x": 292,
-            "y": 279
         }
     ],
     "plainObjects": [],
