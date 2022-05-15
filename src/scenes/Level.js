@@ -167,6 +167,7 @@ class Level extends Phaser.Scene {
 
 	waveController(){
 		this.totalEnemies = this.dificulty*this.enemyRatio;
+		console.log("this.totalEnemies "+this.totalEnemies);
 		console.log("this.EnemiesDestroyed " + this.EnemiesDestroyed);
 		if(this.EnemiesDestroyed == this.totalEnemies){
 			this.dificulty++;
@@ -237,7 +238,7 @@ class Level extends Phaser.Scene {
 
 	crearEnemy2(){
 
-		const enemy2 = new Enemy2(this, Phaser.Math.FloatBetween(0,3000), Phaser.Math.FloatBetween(0,3000));
+		const enemy2 = new Enemy2(this, Phaser.Math.FloatBetween(1500+100,1500+800), Phaser.Math.FloatBetween(1500+100,1500+800));
 		this.add.existing(enemy2);
 	}
 
@@ -249,8 +250,14 @@ class Level extends Phaser.Scene {
 
 	crearEnemy4(){
 
-		const enemy4 = new Enemy4(this, Phaser.Math.FloatBetween(0,3000), Phaser.Math.FloatBetween(0,3000));
+		const enemy4 = new Enemy4(this, Phaser.Math.FloatBetween(0,3000),Phaser.Math.FloatBetween(400,2600));
 		this.add.existing(enemy4);
+	}
+
+	crearEnemy5(){
+
+		const enemy5 = new Enemy5(this, Phaser.Math.FloatBetween(0,3000));
+		this.add.existing(enemy5);
 	}
 
 

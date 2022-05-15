@@ -157,7 +157,7 @@ handleEnemyCollition(){
 					break;
 			case 0:
 					this.scene.heart1.visible=false
-					this.morirAnimation();
+					//this.morirAnimation();
 					break;
 		
 			default:

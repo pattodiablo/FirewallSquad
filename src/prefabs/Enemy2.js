@@ -33,8 +33,8 @@ class Enemy2 extends Phaser.GameObjects.Sprite {
 
 	update(){
 		if(this.active){
-			this.angle=(180/Math.PI)*Phaser.Math.Angle.Between(this.x,this.y,this.scene.player.x,this.scene.player.y); 
-			this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
+			this.angle=90+(180/Math.PI)*Phaser.Math.Angle.Between(this.x,this.y,1500,1500); 
+			this.scene.physics.velocityFromAngle(this.angle, 200 , this.body.velocity);
 		}
 
 

@@ -22,10 +22,16 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 
 		this.scene.physics.add.overlap(this.scene.player, this,this.playerCollide);
 		this.scene.physics.add.overlap(this.scene.playerBullets, this,this.enemyDestroy);
+		//this.setScale(0.1)
+		//this.animarNacimiento()
+
+		//this.body.velocity.x = Phaser.Math.Between(50,100);
+		this.initY=this.y;
+		
 		this.setScale(0.1)
 		this.animarNacimiento()
 
-		this.vel = Phaser.Math.Between(50,200);
+		
 		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
 		this.enemy_destroy.loop = false;
 		
@@ -35,9 +41,9 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 		if(this.active){
 		//this.angle+=180/3000; 
 		//this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
-	this.x++;
-	this.angle++;
-	this.y = 40*Math.sin(this.angle*Math.PI/180);	
+	this.x+=2;
+	this.angle+=2;
+	this.y = this.initY + 400*Math.sin(this.angle*Math.PI/180);	
 	}
 		
 	
