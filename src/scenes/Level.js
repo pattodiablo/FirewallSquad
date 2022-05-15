@@ -4,21 +4,22 @@
 /* START OF COMPILED CODE */
 
 class Level extends Phaser.Scene {
-	
+
 	constructor() {
 		super("Level");
-		
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
-	
+
+	/** @returns {void} */
 	editorCreate() {
-		
+
 		// background
 		const background = this.add.tileSprite(0, 0, 64, 64, "background");
 		background.setOrigin(0, 0);
-		
+
 		// player
 		const player = new Player(this, 296, 276);
 		this.add.existing(player);
@@ -39,8 +40,8 @@ class Level extends Phaser.Scene {
 		const score = this.add.text(602, 15, "", {});
 		score.setOrigin(0.5, 0.5);
 		score.text = "SCORE";
-		score.setStyle({"color":"#ff0048","fontFamily":"KANIT","fontSize":"20px","stroke":"#"});
-		
+		score.setStyle({ "color": "#ff0048", "fontFamily": "KANIT", "fontSize": "20px", "stroke": "#" });
+
 		// Ultimate
 		const ultimate = this.add.text(342, 413, "", {});
 		ultimate.setOrigin(0.5, 0.5);
@@ -49,6 +50,7 @@ class Level extends Phaser.Scene {
 
 		// Counter
 		const counter = this.add.text(685, 18, "", {});
+		counter.setOrigin(0.5, 0.5);
 		counter.text = "00000";
 		counter.setStyle({ "color": "#34eacdff", "fontFamily": "KANIT" });
 
@@ -57,6 +59,9 @@ class Level extends Phaser.Scene {
 		rectangle.fillColor = 16711752;
 		rectangle.isStroked = true;
 		rectangle.strokeColor = 16711752;
+
+		// score (components)
+		new FixedToCamera(score);
 
 		this.background = background;
 		this.player = player;
@@ -70,7 +75,7 @@ class Level extends Phaser.Scene {
 
 		this.events.emit("scene-awake");
 	}
-	
+
 	/** @type {Phaser.GameObjects.TileSprite} */
 	background;
 	/** @type {Player} */
@@ -98,6 +103,13 @@ class Level extends Phaser.Scene {
 
 		this.editorCreate();
 
+		this.physics.world.setBounds(0,0,3000,3000,true,true,true);
+		this.cameras.main.setBounds(0, 0, 3000, 3000,true);
+		this.cameras.main.startFollow(this.player);
+		this.background.width=3000;
+		this.background.height=3000;
+
+
 		this.playerBullets=[];
 		this.rectangle.x=document.body.clientWidth-50;
 		this.counter.x=document.body.clientWidth-77;
@@ -105,11 +117,10 @@ class Level extends Phaser.Scene {
 		this.ultimate.setOrigin(0.5,0.5);
 		this.ultimate.x=document.body.clientWidth/2;
 		this.ultimate.y=document.body.clientHeight-100;
-		this.background.width=document.body.clientWidth;
-		this.background.height=document.body.clientHeight;
+
 		var totalEnemies = 10;
 		var Nenemies3 = Phaser.Math.Between(1,totalEnemies);
-		
+
 		this.createEnemy3Timer = this.time.addEvent({
 			delay: 1500,                // ms
 			callback: this.crearEnemy3,

@@ -78,9 +78,13 @@
             "id": "8d89fb8f-04a8-4718-9895-4d5a2ca1bcca",
             "label": "Score",
             "scope": "CLASS",
-            "components": [],
+            "components": [
+                "FixedToCamera"
+            ],
             "x": 602,
             "y": 15,
+            "originX": 0.5,
+            "originY": 0.5,
             "text": "SCORE",
             "fontFamily": "KANIT",
             "fontSize": "20px",
@@ -95,6 +99,8 @@
             "components": [],
             "x": 342,
             "y": 413,
+            "originX": 0.5,
+            "originY": 0.5,
             "text": "ULTIMATE DEFENSE",
             "align": "center",
             "fontFamily": "KANIT",
@@ -109,6 +115,8 @@
             "components": [],
             "x": 685,
             "y": 18,
+            "originX": 0.5,
+            "originY": 0.5,
             "text": "00000",
             "fontFamily": "KANIT",
             "color": "#34eacdff"
@@ -132,6 +140,7 @@
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
-        "contentType": "phasereditor2d.core.scene.SceneContentType"
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
     }
 }

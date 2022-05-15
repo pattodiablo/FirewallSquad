@@ -25,7 +25,7 @@ class PlayerBullet extends Phaser.GameObjects.Sprite {
 		if(this.x<0){
 			this.destroy();
 		}
-		if(this.x>document.body.clientWidth){
+		if(this.x>3000){
 			this.destroy();
 		}
 
@@ -33,7 +33,7 @@ class PlayerBullet extends Phaser.GameObjects.Sprite {
 			this.destroy();
 		}
 
-		if(this.y>document.body.clientHeight){
+		if(this.y>3000){
 			this.destroy();
 		}
 	}
