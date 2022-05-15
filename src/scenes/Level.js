@@ -60,9 +60,6 @@ class Level extends Phaser.Scene {
 		rectangle.isStroked = true;
 		rectangle.strokeColor = 16711752;
 
-		// score (components)
-		new FixedToCamera(score);
-
 		this.background = background;
 		this.player = player;
 		this.heart1 = heart1;
@@ -112,11 +109,19 @@ class Level extends Phaser.Scene {
 
 		this.playerBullets=[];
 		this.rectangle.x=document.body.clientWidth-50;
+		this.rectangle.setScrollFactor(0, 0);
 		this.counter.x=document.body.clientWidth-77;
+		this.counter.setScrollFactor(0, 0);
 		this.score.x=document.body.clientWidth-160;
+		this.score.setScrollFactor(0, 0);
 		this.ultimate.setOrigin(0.5,0.5);
 		this.ultimate.x=document.body.clientWidth/2;
 		this.ultimate.y=document.body.clientHeight-100;
+		this.ultimate.setScrollFactor(0, 0);
+
+		this.heart1.setScrollFactor(0, 0);
+		this.heart2.setScrollFactor(0, 0);
+		this.heart3.setScrollFactor(0, 0);
 
 		var totalEnemies = 10;
 		var Nenemies3 = Phaser.Math.Between(1,totalEnemies);

@@ -3,24 +3,27 @@
 
 /* START OF COMPILED CODE */
 
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
+
 class CharacterMove extends EventComponent {
-	
+
 	constructor(gameObject) {
 		super(gameObject);
-		
+
 		this.gameObject = gameObject;
 		gameObject["__CharacterMove"] = this;
-		
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
-	
+
 	/** @returns {CharacterMove} */
 	static getComponent(gameObject) {
 		return gameObject["__CharacterMove"];
 	}
-	
+
 	/** @type {Phaser.GameObjects.Image} */
 	gameObject;
 	/** @type {number} */
@@ -29,7 +32,7 @@ class CharacterMove extends EventComponent {
 	deltaY = 0;
 	/** @type {number} */
 	duration = 0;
-	
+
 	/* START-USER-CODE */
 
 	start() {

@@ -3,29 +3,32 @@
 
 /* START OF COMPILED CODE */
 
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
+
 class AnimationKillOnComplete extends EventComponent {
-	
+
 	constructor(gameObject) {
 		super(gameObject);
-		
+
 		this.gameObject = gameObject;
 		gameObject["__AnimationKillOnComplete"] = this;
-		
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
-	
+
 	/** @returns {AnimationKillOnComplete} */
 	static getComponent(gameObject) {
 		return gameObject["__AnimationKillOnComplete"];
 	}
-	
+
 	/** @type {Phaser.GameObjects.Sprite} */
 	gameObject;
 	/** @type {string} */
 	animationKey = "";
-	
+
 	/* START-USER-CODE */
 
 	start() {
