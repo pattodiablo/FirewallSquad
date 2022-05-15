@@ -56,8 +56,8 @@ class Preload extends Phaser.Scene {
 
 		this.guapen.x=this.cameras.main.centerX;
 		this.progress.x=this.cameras.main.centerX;
-		
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level"));
+
+		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Inicio"));
 	}
 
 	/* END-USER-CODE */

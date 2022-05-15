@@ -113,6 +113,11 @@
                 "key": "Heart"
             },
             {
+                "url": "assets/jugarBtn.png",
+                "type": "image",
+                "key": "jugarBtn"
+            },
+            {
                 "url": "assets/player.png",
                 "type": "image",
                 "key": "player"

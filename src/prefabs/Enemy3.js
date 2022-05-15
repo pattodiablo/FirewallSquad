@@ -74,7 +74,9 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
 		console.log(enemy.scene.EnemiesDestroyed);
+		bullet.particles.destroy();
 		bullet.destroy();
+	
 		var destroyTimer = enemy.scene.time.addEvent({
 			delay: 500,                // ms
 			callback: function(){
