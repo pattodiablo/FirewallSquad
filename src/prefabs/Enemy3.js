@@ -19,7 +19,7 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 		this.scene.physics.world.enableBody(this);
 		this.scene.physics.add.overlap(this.scene.player, this,this.playerCollide);
 		this.scene.physics.add.overlap(this.scene.playerBullets, this,this.enemyDestroy);
-		this.setScale(0.1)
+		this.setScale(1)
 		this.animarNacimiento()
 	}
 
@@ -35,6 +35,20 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 
 		});
 		entrandoTimeline.play();
+
+		
+		var pulsa = this.scene.tweens.createTimeline();
+		pulsa.add({
+			targets: this,
+			scale: 1.1,
+			duration: 500,
+			ease: 'Linear',
+			loop: true,
+			repeat:-1,
+			yoyo:true
+
+		});
+		pulsa.play();
 
 	}
 	
