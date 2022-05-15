@@ -4,22 +4,21 @@
 /* START OF COMPILED CODE */
 
 class Level extends Phaser.Scene {
-
+	
 	constructor() {
 		super("Level");
-
+		
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
-
-	/** @returns {void} */
+	
 	editorCreate() {
-
+		
 		// background
 		const background = this.add.tileSprite(0, 0, 64, 64, "background");
 		background.setOrigin(0, 0);
-
+		
 		// player
 		const player = new Player(this, 296, 276);
 		this.add.existing(player);
@@ -38,11 +37,13 @@ class Level extends Phaser.Scene {
 
 		// Score
 		const score = this.add.text(602, 15, "", {});
+		score.setOrigin(0.5, 0.5);
 		score.text = "SCORE";
-		score.setStyle({ "color": "#ff0048", "fontFamily": "KANIT", "fontSize": "20px", "stroke": "#" });
-
+		score.setStyle({"color":"#ff0048","fontFamily":"KANIT","fontSize":"20px","stroke":"#"});
+		
 		// Ultimate
 		const ultimate = this.add.text(342, 413, "", {});
+		ultimate.setOrigin(0.5, 0.5);
 		ultimate.text = "ULTIMATE DEFENSE";
 		ultimate.setStyle({ "align": "center", "color": "#ff0048", "fontFamily": "KANIT", "fontSize": "20px" });
 
@@ -69,7 +70,7 @@ class Level extends Phaser.Scene {
 
 		this.events.emit("scene-awake");
 	}
-
+	
 	/** @type {Phaser.GameObjects.TileSprite} */
 	background;
 	/** @type {Player} */
@@ -115,8 +116,8 @@ class Level extends Phaser.Scene {
 			loop: true
 		});
 
-		this.createEnemy1Timer = this.time.addEvent({
-			delay: 2000,                // ms
+		this.createEnemy3Timer = this.time.addEvent({
+			delay: 1500,                // ms
 			callback: this.crearEnemy1,
 			//args: [],
 			callbackScope: this,
@@ -140,6 +141,7 @@ class Level extends Phaser.Scene {
 		this.add.existing(enemy1);
 
 	}
+
 
 	/* END-USER-CODE */
 }
