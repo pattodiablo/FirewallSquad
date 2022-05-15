@@ -29,6 +29,7 @@
                 "y"
             ],
             "label": "player",
+            "scope": "CLASS",
             "components": [],
             "x": 296,
             "y": 276
@@ -123,7 +124,6 @@
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
-        "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
     }
 }
