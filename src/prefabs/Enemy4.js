@@ -26,14 +26,18 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 		this.animarNacimiento()
 
 		this.vel = Phaser.Math.Between(50,200);
+
 		
 	}
 
 	update(){
 		if(this.active){
-		this.angle++ 
-		this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
-		}
+		//this.angle+=180/3000; 
+		//this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
+	this.x++;
+	this.angle++;
+	this.y = 40*Math.sin(this.angle*Math.PI/180);	
+	}
 		
 	
 	
