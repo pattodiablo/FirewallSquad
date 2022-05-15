@@ -144,6 +144,66 @@
             "components": [],
             "x": 416,
             "y": 243
+        },
+        {
+            "prefabId": "fb3eeebb-dc34-472e-8114-8b741d149e33",
+            "id": "a9af2a67-60dc-41cc-85d0-e6584084fa39",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "enemy4",
+            "components": [],
+            "x": 621,
+            "y": 104
+        },
+        {
+            "prefabId": "347e3f26-a74a-4e1e-a1b2-833389cf0ccd",
+            "id": "137fa879-2ec8-4c87-b010-6d283251109a",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "enemy5",
+            "components": [],
+            "x": 713,
+            "y": 240
+        },
+        {
+            "prefabId": "099cd796-233f-4494-a97a-38ccb9d899c8",
+            "id": "ed2b6bc1-d094-4e6d-8ee3-9a3ee7859387",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "boss",
+            "components": [],
+            "x": 872,
+            "y": 178
+        },
+        {
+            "prefabId": "4f2ebcc3-86dd-4e1f-92ce-d4983ed9f73d",
+            "id": "4707c746-a96a-40f6-baf2-b090c02e3480",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "enemy3",
+            "components": [],
+            "x": 348,
+            "y": 112
+        },
+        {
+            "prefabId": "27fc898d-4448-4eac-b10d-12a54c853557",
+            "id": "0aafe0a9-5eb6-4a17-87ea-7e88e269d7eb",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "hit20004",
+            "components": [],
+            "x": 124,
+            "y": 164
         }
     ],
     "plainObjects": [],

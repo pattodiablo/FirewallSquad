@@ -64,6 +64,26 @@ class Level extends Phaser.Scene {
 		const enemy2 = new Enemy2(this, 416, 243);
 		this.add.existing(enemy2);
 
+		// enemy4
+		const enemy4 = new Enemy4(this, 621, 104);
+		this.add.existing(enemy4);
+
+		// enemy5
+		const enemy5 = new Enemy5(this, 713, 240);
+		this.add.existing(enemy5);
+
+		// boss
+		const boss = new Boss(this, 872, 178);
+		this.add.existing(boss);
+
+		// enemy3
+		const enemy3 = new Enemy3(this, 348, 112);
+		this.add.existing(enemy3);
+
+		// hit20004
+		const hit20004 = new Shield(this, 124, 164);
+		this.add.existing(hit20004);
+
 		this.background = background;
 		this.player = player;
 		this.heart1 = heart1;

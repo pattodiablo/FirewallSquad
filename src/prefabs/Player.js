@@ -29,6 +29,7 @@ create(){
     this.body.drag=0.99;
     this.body.setMaxVelocity(400);
 	this.defaultDamping = 0;
+	this.gotShield=false;
 
 	console.log(this.body);
 
@@ -120,7 +121,8 @@ handleScore(enemy){
 }
 
 handleEnemyCollition(){
-	
+	this.scene.cameras.main.shake(60);
+	this.scene.cameras.main.flash(200, 172, 29, 41);
 	this.life--;
 	switch (this.life) {
 		case 2:
@@ -140,6 +142,9 @@ handleEnemyCollition(){
 }
 
 update(){
+
+
+
 	this.defaultDamping++;
 	if(this.defaultDamping>=1.1){
 		this.defaultDamping=1.1;
@@ -189,6 +194,12 @@ this.body.setFriction(10,10);
 		this.defaultDamping=1;
 		this.scene.physics.velocityFromRotation(this.rotation, 350, this.body.velocity);
     }
+
+	if(this.gotShield){
+		console.log("aparecer escudo")
+		this.gotShield=false;
+	}
+	
     
 }
 

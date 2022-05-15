@@ -147,6 +147,18 @@
                 "textureURL": "assets/atlas/propsNew.png",
                 "type": "atlas",
                 "key": "propsNew"
+            },
+            {
+                "url": [
+                    "src/prefabs/Shield.js"
+                ],
+                "type": "scripts",
+                "key": "Shield"
+            },
+            {
+                "url": "assets/ShieldImg.png",
+                "type": "image",
+                "key": "ShieldImg"
             }
         ]
     },
