@@ -206,7 +206,7 @@ class Level extends Phaser.Scene {
 		console.log("this.totalEnemies " + this.totalEnemies);
 		
 		this.createEnemy1Timer = this.time.addEvent({
-			delay: 1500,                // ms
+			delay: 100,                // ms
 			callback: this.crearEnemy1,
 			//args: [],
 			callbackScope: this,
@@ -214,7 +214,7 @@ class Level extends Phaser.Scene {
 		});
 
 		this.createEnemy2Timer = this.time.addEvent({
-			delay: 1500,                // ms
+			delay: 100,                // ms
 			callback: this.crearEnemy2,
 			//args: [],
 			callbackScope: this,
@@ -222,7 +222,7 @@ class Level extends Phaser.Scene {
 		});
 
 		this.createEnemy3Timer = this.time.addEvent({
-			delay: 1500,                // ms
+			delay: 100,                // ms
 			callback: this.crearEnemy3,
 			//args: [],
 			callbackScope: this,
@@ -230,7 +230,7 @@ class Level extends Phaser.Scene {
 		});
 
 		this.createEnemy4Timer = this.time.addEvent({
-			delay: 1500,                // ms
+			delay: 100,                // ms
 			callback: this.crearEnemy4,
 			//args: [],
 			callbackScope: this,
@@ -238,7 +238,7 @@ class Level extends Phaser.Scene {
 		});
 
 		this.createEnemy5Timer = this.time.addEvent({
-			delay: 1500,                // ms
+			delay: 100,                // ms
 			callback: this.crearEnemy5,
 			//args: [],
 			callbackScope: this,
