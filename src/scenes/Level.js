@@ -260,7 +260,7 @@ class Level extends Phaser.Scene {
 
 	crearEnemy5(){
 
-		const enemy5 = new Enemy5(this, Phaser.Math.FloatBetween(0,3000));
+		const enemy5 = new Enemy5(this, Phaser.Math.FloatBetween(0,3000),Phaser.Math.FloatBetween(0,3000));
 		this.add.existing(enemy5);
 	}
 
