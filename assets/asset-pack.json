@@ -120,6 +120,13 @@
                 "key": "Heart"
             },
             {
+                "url": [
+                    "assets/audio/sfx/hurt.mp3"
+                ],
+                "type": "audio",
+                "key": "hurt"
+            },
+            {
                 "url": "src/scenes/Inicio.js",
                 "type": "sceneFile",
                 "key": "Inicio"
@@ -128,6 +135,13 @@
                 "url": "assets/jugarBtn.png",
                 "type": "image",
                 "key": "jugarBtn"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/laser_shot.mp3"
+                ],
+                "type": "audio",
+                "key": "laser_shot"
             },
             {
                 "url": "assets/player.png",
