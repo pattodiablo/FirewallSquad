@@ -21,7 +21,12 @@ class Creditos extends Phaser.Scene {
 		background.setOrigin(0, 0);
 
 		// jugarBtn
-		const jugarBtn = this.add.sprite(400, 463, "jugarBtn");
+		const jugarBtn = this.add.sprite(400, 539, "jugarBtn");
+
+		// CreditsPanel
+		const creditsPanel = this.add.text(247, 45, "", {});
+		creditsPanel.text = "-- Arte y Diseño --\nKaithzer Morejón\nPaz Rodríguez\nCamilo Dexsidia\nKama Tenesaca\n\n-- Música --\nAgustín Carrión\nFalcon Light\n\n-- Project Manager --\nRuth Valverde\n\n-- Programación --\nDiego León\nPatricio León (Weveana)\n";
+		creditsPanel.setStyle({ "align": "center", "fontFamily": "Kanit", "fontSize": "32px" });
 
 		this.background = background;
 		this.jugarBtn = jugarBtn;
