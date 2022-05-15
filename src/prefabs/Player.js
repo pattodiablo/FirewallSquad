@@ -26,6 +26,7 @@ create(){
 	this.score=0;
 	this.body.setDamping(true);
 	this.body.drag=0.99;
+	
 	console.log(this.body);
 
 	this.cursors = this.scene.input.keyboard.addKeys(
