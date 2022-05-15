@@ -1,15 +1,15 @@
 {
-    "id": "3f2d3495-9f0e-4575-8d9e-ef0ae1a39e94",
+    "id": "f6f2b183-ee44-49d5-97c5-3e8d5682cdf0",
     "sceneType": "SCENE",
     "settings": {
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
-        "sceneKey": "Inicio"
+        "sceneKey": "Creditos"
     },
     "displayList": [
         {
             "type": "TileSprite",
-            "id": "c61f7343-07be-4dd1-9f7b-a0fccd0fe15f",
+            "id": "98dfbda9-da31-458d-b9bc-557bc179e0f8",
             "label": "background",
             "scope": "CLASS",
             "components": [],
@@ -23,27 +23,15 @@
         },
         {
             "type": "Sprite",
-            "id": "58247e8b-f530-4cc6-9861-bd274ef03fc1",
+            "id": "43412b4d-9cf0-4a72-87b1-e2d61e9d518c",
             "label": "jugarBtn",
             "scope": "CLASS",
             "components": [],
             "texture": {
                 "key": "jugarBtn"
             },
-            "x": 420,
-            "y": 382
-        },
-        {
-            "type": "Sprite",
-            "id": "df0a0646-b131-400a-a8c4-185a44421be6",
-            "label": "creditos",
-            "scope": "CLASS",
-            "components": [],
-            "texture": {
-                "key": "creditos"
-            },
-            "x": 418,
-            "y": 487
+            "x": 400,
+            "y": 463
         }
     ],
     "plainObjects": [],

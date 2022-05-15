@@ -19,6 +19,16 @@
                 "key": "Boss"
             },
             {
+                "url": "assets/creditos.png",
+                "type": "image",
+                "key": "creditos"
+            },
+            {
+                "url": "src/scenes/Creditos.js",
+                "type": "sceneFile",
+                "key": "Creditos"
+            },
+            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"

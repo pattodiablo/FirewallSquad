@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class Inicio extends Phaser.Scene {
+class Creditos extends Phaser.Scene {
 
 	constructor() {
-		super("Inicio");
+		super("Creditos");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -21,14 +21,10 @@ class Inicio extends Phaser.Scene {
 		background.setOrigin(0, 0);
 
 		// jugarBtn
-		const jugarBtn = this.add.sprite(420, 382, "jugarBtn");
-
-		// creditos
-		const creditos = this.add.sprite(418, 487, "creditos");
+		const jugarBtn = this.add.sprite(400, 463, "jugarBtn");
 
 		this.background = background;
 		this.jugarBtn = jugarBtn;
-		this.creditos = creditos;
 
 		this.events.emit("scene-awake");
 	}
@@ -37,8 +33,6 @@ class Inicio extends Phaser.Scene {
 	background;
 	/** @type {Phaser.GameObjects.Sprite} */
 	jugarBtn;
-	/** @type {Phaser.GameObjects.Sprite} */
-	creditos;
 
 	/* START-USER-CODE */
 
@@ -46,32 +40,20 @@ class Inicio extends Phaser.Scene {
 
 	create() {
 
-		this.splash_screen = this.sound.add('splash_screen');
-		this.splash_screen.loop = true;
-		this.splash_screen.play();
-
 		this.editorCreate();
+
 		this.jugarBtn.x=this.cameras.main.centerX;
 		this.jugarBtn.setInteractive().on('pointerup', this.iniciarJuego,this);
-
-		this.creditos.x=this.cameras.main.centerX;
-		
-		this.creditos.setInteractive().on('pointerup', this.mostrarCreditos,this);
 
 		this.background.width=3000;
 		this.background.height=3000;
 	}
 
-	mostrarCreditos(){
-
-		this.splash_screen.stop();
-		this.scene.start('Creditos');
-	}
-
 	iniciarJuego(){
-		this.splash_screen.stop();
+
 		this.scene.start('Level');
 	}
+
 	/* END-USER-CODE */
 }
 
