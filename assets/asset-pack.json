@@ -19,6 +19,13 @@
                 "key": "Boss"
             },
             {
+                "url": [
+                    "assets/audio/sfx/boss_move.mp3"
+                ],
+                "type": "audio",
+                "key": "boss_move"
+            },
+            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"
