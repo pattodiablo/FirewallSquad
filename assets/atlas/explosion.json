@@ -1,0 +1,92 @@
+{"frames": {
+
+"EXP_01.png":
+{
+	"frame": {"x":1,"y":1,"w":79,"h":77},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":79,"w":79,"h":77},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_02.png":
+{
+	"frame": {"x":81,"y":1,"w":99,"h":93},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":31,"y":71,"w":99,"h":93},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_03.png":
+{
+	"frame": {"x":1,"y":95,"w":129,"h":127},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":50,"w":129,"h":127},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_04.png":
+{
+	"frame": {"x":1,"y":223,"w":151,"h":151},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":38,"w":151,"h":151},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_05.png":
+{
+	"frame": {"x":1,"y":375,"w":179,"h":173},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":24,"w":179,"h":173},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_06.png":
+{
+	"frame": {"x":1,"y":549,"w":207,"h":197},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":10,"w":207,"h":197},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_07.png":
+{
+	"frame": {"x":1,"y":747,"w":211,"h":205},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":2,"w":211,"h":205},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_08.png":
+{
+	"frame": {"x":1,"y":953,"w":211,"h":205},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":211,"h":205},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_09.png":
+{
+	"frame": {"x":1,"y":1159,"w":163,"h":191},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":0,"w":163,"h":191},
+	"sourceSize": {"w":211,"h":207}
+},
+"EXP_10.png":
+{
+	"frame": {"x":1,"y":1351,"w":151,"h":167},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":51,"y":9,"w":151,"h":167},
+	"sourceSize": {"w":211,"h":207}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "explosion.png",
+	"format": "RGBA8888",
+	"size": {"w":213,"h":1573},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:89175e424de3636a01ed6b876fd5f9ff:83fb9b993cc11bbc3556a83616d68c88:900e1fb3093a9a6ecb2b2b49071c44f7$"
+}
+}
