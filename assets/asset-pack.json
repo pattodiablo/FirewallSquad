@@ -184,10 +184,17 @@
             },
             {
                 "url": [
-                    "assets/audio/soundtrack01.mp3"
+                    "assets/audio/music/soundtrack01.mp3"
                 ],
                 "type": "audio",
                 "key": "soundtrack01"
+            },
+            {
+                "url": [
+                    "assets/audio/music/splash_screen.mp3"
+                ],
+                "type": "audio",
+                "key": "splash_screen"
             }
         ]
     },

@@ -40,6 +40,10 @@ class Inicio extends Phaser.Scene {
 
 	create() {
 
+		this.splash_screen = this.sound.add('splash_screen');
+		this.splash_screen.loop = true;
+		this.splash_screen.play();
+
 		this.editorCreate();
 		this.jugarBtn.x=this.cameras.main.centerX;
 		this.jugarBtn.setInteractive().on('pointerup', this.iniciarJuego,this);
@@ -48,7 +52,7 @@ class Inicio extends Phaser.Scene {
 	}
 
 	iniciarJuego(){
-
+		this.splash_screen.stop();
 		this.scene.start('Level');
 	}
 	/* END-USER-CODE */
