@@ -164,6 +164,11 @@
                 "key": "propsNew"
             },
             {
+                "url": "assets/rejugarBtn.png",
+                "type": "image",
+                "key": "rejugarBtn"
+            },
+            {
                 "url": [
                     "src/prefabs/Shield.js"
                 ],

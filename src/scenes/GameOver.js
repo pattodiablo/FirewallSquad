@@ -22,7 +22,7 @@ class GameOver extends Phaser.Scene {
 		gameOverText.setStyle({ "align": "center", "fontSize": "54px" });
 
 		// jugarBtn
-		const jugarBtn = this.add.sprite(363, 317, "jugarBtn");
+		const jugarBtn = this.add.sprite(363, 317, "rejugarBtn");
 
 		this.gameOverText = gameOverText;
 		this.jugarBtn = jugarBtn;
