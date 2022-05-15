@@ -33,11 +33,16 @@ class Preload extends Phaser.Scene {
 		progress.text = "0%";
 		progress.setStyle({ "fontSize": "30px" });
 
-		// progress (components)
-		new PreloadText(progress);
+		this.guapen = guapen;
+		this.progress = progress;
 
 		this.events.emit("scene-awake");
 	}
+
+	/** @type {Phaser.GameObjects.Image} */
+	guapen;
+	/** @type {Phaser.GameObjects.Text} */
+	progress;
 
 	/* START-USER-CODE */
 
@@ -49,6 +54,9 @@ class Preload extends Phaser.Scene {
 
 		this.editorPreload();
 
+		this.guapen.x=this.cameras.main.centerX;
+		this.progress.x=this.cameras.main.centerX;
+		
 		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level"));
 	}
 
