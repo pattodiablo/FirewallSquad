@@ -4,61 +4,66 @@
 /* START OF COMPILED CODE */
 
 class Level extends Phaser.Scene {
-	
+
 	constructor() {
 		super("Level");
-		
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
-	
+
+	/** @returns {void} */
 	editorCreate() {
-		
+
 		// background
 		const background = this.add.tileSprite(0, 0, 64, 64, "background");
 		background.setOrigin(0, 0);
-		
+
 		// player
 		const player = new Player(this, 296, 276);
 		this.add.existing(player);
-		
+
 		// heart1
 		const heart1 = new Heart(this, 26, 23);
 		this.add.existing(heart1);
-		
+
 		// heart2
 		const heart2 = new Heart(this, 61, 22);
 		this.add.existing(heart2);
-		
+
 		// heart3
 		const heart3 = new Heart(this, 94, 22);
 		this.add.existing(heart3);
-		
+
 		// Score
 		const score = this.add.text(602, 15, "", {});
 		score.setOrigin(0.5, 0.5);
 		score.text = "SCORE";
-		score.setStyle({"color":"#ff0048","fontFamily":"KANIT","fontSize":"20px","stroke":"#"});
-		
+		score.setStyle({ "color": "#ff0048", "fontFamily": "KANIT", "fontSize": "20px", "stroke": "#" });
+
 		// Ultimate
 		const ultimate = this.add.text(342, 413, "", {});
 		ultimate.setOrigin(0.5, 0.5);
 		ultimate.text = "ULTIMATE DEFENSE";
-		ultimate.setStyle({"align":"center","color":"#ff0048","fontFamily":"KANIT","fontSize":"20px"});
-		
+		ultimate.setStyle({ "align": "center", "color": "#ff0048", "fontFamily": "KANIT", "fontSize": "20px" });
+
 		// Counter
 		const counter = this.add.text(685, 18, "", {});
 		counter.setOrigin(0.5, 0.5);
 		counter.text = "00000";
-		counter.setStyle({"color":"#34eacdff","fontFamily":"KANIT"});
-		
+		counter.setStyle({ "color": "#34eacdff", "fontFamily": "KANIT" });
+
 		// rectangle
-		const rectangle = this.add.rectangle(711, 24, 70, 30);
+		const rectangle = this.add.rectangle(711, 18, 70, 30);
 		rectangle.fillColor = 16711752;
 		rectangle.isStroked = true;
 		rectangle.strokeColor = 16711752;
-		
+
+		// enemy3
+		const enemy3 = new Enemy3(this, 400, 250);
+		this.add.existing(enemy3);
+
 		this.background = background;
 		this.player = player;
 		this.heart1 = heart1;
@@ -68,8 +73,10 @@ class Level extends Phaser.Scene {
 		this.ultimate = ultimate;
 		this.counter = counter;
 		this.rectangle = rectangle;
+
+		this.events.emit("scene-awake");
 	}
-	
+
 	/** @type {Phaser.GameObjects.TileSprite} */
 	background;
 	/** @type {Player} */
@@ -88,7 +95,7 @@ class Level extends Phaser.Scene {
 	counter;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	rectangle;
-	
+
 	/* START-USER-CODE */
 
 	// Write more your code here
@@ -120,12 +127,12 @@ class Level extends Phaser.Scene {
 		this.heart2.setScrollFactor(0, 0);
 		this.heart3.setScrollFactor(0, 0);
 
-	
+
 		this.EnemiesDestroyed = 0;
 		this.dificulty = 1;
 		this.enemyRatio = 10;
 		this.IswaveActive = true;
-		
+
 		this.createEnemy1Timer = this.time.addEvent({
 			delay: 1500,                // ms
 			callback: this.waveController,
@@ -152,7 +159,7 @@ class Level extends Phaser.Scene {
 			this.lanzarWave();
 			this.IswaveActive = false;
 		}
-		
+
 	}
 	lanzarWave(){
 		var Nenemies3 = Phaser.Math.Between(1,this.totalEnemies);
@@ -173,7 +180,7 @@ class Level extends Phaser.Scene {
 			repeat: Nenemies3
 		});
 	}
-	
+
 
 	crearEnemy1(){
 		const enemy1 = new Enemy1(this,Phaser.Math.FloatBetween(0,3000), Phaser.Math.FloatBetween(0,3000))
@@ -186,7 +193,7 @@ class Level extends Phaser.Scene {
 		const enemy3 = new Enemy3(this, Phaser.Math.FloatBetween(0,3000), Phaser.Math.FloatBetween(0,3000));
 		this.add.existing(enemy3);
 	}
-	
+
 
 
 	/* END-USER-CODE */
