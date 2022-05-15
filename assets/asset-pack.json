@@ -26,6 +26,13 @@
                 "key": "boss_move"
             },
             {
+                "url": [
+                    "assets/audio/sfx/death_player.mp3"
+                ],
+                "type": "audio",
+                "key": "death_player"
+            },
+            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"
@@ -120,6 +127,13 @@
                 "textureURL": "assets/atlas/flares.png",
                 "type": "atlas",
                 "key": "flares"
+            },
+            {
+                "url": [
+                    "assets/audio/sfx/game_over.mp3"
+                ],
+                "type": "audio",
+                "key": "game_over"
             },
             {
                 "url": "assets/heart.png",
