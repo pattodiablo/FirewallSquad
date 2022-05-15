@@ -17,6 +17,38 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 
 	create(){
 		this.scene.physics.world.enableBody(this);
+		this.scene.physics.add.overlap(this.scene.player, this,this.playerCollide);
+		this.scene.physics.add.overlap(this.scene.playerBullets, this,this.enemyDestroy);
+		this.setScale(0.1)
+		this.animarNacimiento()
+	}
+
+	animarNacimiento(){
+
+		var entrandoTimeline = this.scene.tweens.createTimeline();
+		entrandoTimeline.add({
+			targets: this,
+			scale: 1,
+			duration: 100,
+			ease: 'Linear',
+			repeat: 0
+
+		});
+		entrandoTimeline.play();
+
+	}
+	
+	enemyDestroy(bullet,enemy){
+		//poner sonido
+	
+		enemy.scene.player.handleScore(enemy);
+		enemy.destroy();
+	}
+
+	playerCollide(player,enemy){
+	enemy.destroy();
+		player.handleEnemyCollition();
+		
 	}
 
 	/* END-USER-CODE */
