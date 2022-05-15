@@ -213,12 +213,23 @@ class Level extends Phaser.Scene {
 
 	}
 
+	crearEnemy2(){
+
+		const enemy2 = new Enemy2(this, Phaser.Math.FloatBetween(0,3000), Phaser.Math.FloatBetween(0,3000));
+		this.add.existing(enemy2);
+	}
+
 	crearEnemy3(){
 
 		const enemy3 = new Enemy3(this, Phaser.Math.FloatBetween(0,3000), Phaser.Math.FloatBetween(0,3000));
 		this.add.existing(enemy3);
 	}
 
+	crearEnemy4(){
+
+		const enemy4 = new Enemy4(this, Phaser.Math.FloatBetween(0,3000), Phaser.Math.FloatBetween(0,3000));
+		this.add.existing(enemy4);
+	}
 
 
 	/* END-USER-CODE */
