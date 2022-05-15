@@ -84,6 +84,9 @@ class Level extends Phaser.Scene {
 		const hit20004 = new Shield(this, 124, 164);
 		this.add.existing(hit20004);
 
+		// shieldImg
+		this.add.image(292, 279, "ShieldImg");
+
 		this.background = background;
 		this.player = player;
 		this.heart1 = heart1;
