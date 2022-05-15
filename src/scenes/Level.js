@@ -107,13 +107,15 @@ class Level extends Phaser.Scene {
 		this.ultimate.y=document.body.clientHeight-100;
 		this.background.width=document.body.clientWidth;
 		this.background.height=document.body.clientHeight;
-
+		var totalEnemies = 10;
+		var Nenemies3 = Phaser.Math.Between(1,totalEnemies);
+		
 		this.createEnemy3Timer = this.time.addEvent({
 			delay: 1500,                // ms
 			callback: this.crearEnemy3,
 			//args: [],
 			callbackScope: this,
-			loop: true
+			repeat: Nenemies3
 		});
 
 		this.createEnemy3Timer = this.time.addEvent({
@@ -121,7 +123,7 @@ class Level extends Phaser.Scene {
 			callback: this.crearEnemy1,
 			//args: [],
 			callbackScope: this,
-			loop: true
+			repeat: totalEnemies-Nenemies3
 		});
 
 
