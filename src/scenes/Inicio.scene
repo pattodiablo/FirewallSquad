@@ -8,6 +8,20 @@
     },
     "displayList": [
         {
+            "type": "TileSprite",
+            "id": "c61f7343-07be-4dd1-9f7b-a0fccd0fe15f",
+            "label": "background",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "background"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 64,
+            "height": 64
+        },
+        {
             "type": "Sprite",
             "id": "58247e8b-f530-4cc6-9861-bd274ef03fc1",
             "label": "jugarBtn",
