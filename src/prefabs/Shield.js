@@ -87,6 +87,7 @@ animarNacimiento(){
 		Shield.play("hit2",true);
 		Shield.body.enable=false;
 		player.gotShield=true;
+		player.shieldPower=3;
 		var destroyTimer = Shield.scene.time.addEvent({
 			delay: 500,                // ms
 			callback: function(){

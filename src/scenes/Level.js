@@ -100,7 +100,7 @@ class Level extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
-
+		this.scene.scene.cameras.main.fadeIn(1000);
 		this.soundtrack01 = this.sound.add('soundtrack01');
 		this.soundtrack01.loop = true;
 		this.soundtrack01.play();		
@@ -142,6 +142,25 @@ class Level extends Phaser.Scene {
 			callbackScope: this,
 			loop: true
 		});
+
+		
+		this.createShieldsTimer = this.time.addEvent({
+			delay: 8000,                // ms
+			callback: this.createAshield,
+			//args: [],
+			callbackScope: this,
+			loop: true
+		});
+
+		
+
+
+	}
+
+	createAshield(){
+
+		const hit20004 = new Shield(this, Phaser.Math.Between(30, document.body.clientWidth),  Phaser.Math.Between(30, document.body.clientHeight));
+		this.add.existing(hit20004);
 
 
 	}

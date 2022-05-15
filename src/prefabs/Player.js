@@ -266,7 +266,7 @@ this.body.setFriction(10,10);
 		this.scene.physics.velocityFromRotation(this.rotation, 350, this.body.velocity);
     }
 
-	if(this.gotShield){
+	if(this.gotShield && !this.isShieldActive){
 		console.log("aparecer escudo")
 		const shieldImg = new ShipShield(this.scene, this.x, this.y);
 		this.scene.add.existing(shieldImg);
