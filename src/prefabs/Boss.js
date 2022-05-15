@@ -26,7 +26,8 @@ class Boss extends Phaser.GameObjects.Sprite {
 		this.animarNacimiento()
 
 		this.vel = Phaser.Math.Between(50,200);
-		
+		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
+		this.enemy_destroy.loop = false;
 	}
 
 	update(){
@@ -71,6 +72,7 @@ class Boss extends Phaser.GameObjects.Sprite {
 	enemyDestroy(bullet,enemy){
 		//poner sonido
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.body.enable=false;
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
@@ -95,9 +97,10 @@ class Boss extends Phaser.GameObjects.Sprite {
 
 	playerCollide(player,enemy){
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.scene.EnemiesDestroyed++;
 		enemy.body.enable=false;
-		console.log(enemy.scene.EnemiesDestroyed);
+		//console.log(enemy.scene.EnemiesDestroyed);
 		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
 		callback: function(){
@@ -114,5 +117,11 @@ class Boss extends Phaser.GameObjects.Sprite {
 		
 	}
 
+	/* END-USER-CODE */
+}
+
+/* END OF COMPILED CODE */
+
+// You can write more code here
 	/* END-USER-CODE */
 }

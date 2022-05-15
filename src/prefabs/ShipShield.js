@@ -20,6 +20,9 @@ class ShipShield extends Phaser.GameObjects.Sprite {
 		this.animarNacimiento();
 		this.setScale(1.2);
 		this.scene.ShipShield=this;
+		this.shield_up = this.scene.sound.add('shield_up');
+		this.shield_up.loop = false;
+		this.shield_up.play();	
 
 	}
 	update(){
