@@ -43,7 +43,7 @@ class Enemy4 extends Phaser.GameObjects.Sprite {
 		//this.scene.physics.velocityFromAngle(-90+this.angle, this.vel , this.body.velocity);
 	this.x+=2;
 	this.angle+=2;
-	this.body.y = this.initY + 400*Math.sin(this.angle*Math.PI/180);	
+	this.body.y = this.initY + 400*Math.sin(this.angle*Math.PI/180);
 	if(this.x>3000){
 		this.x = 0;
 	}
