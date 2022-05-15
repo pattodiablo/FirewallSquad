@@ -78,13 +78,15 @@ class Level extends Phaser.Scene {
 
 		this.background.width=document.body.clientWidth;
 		this.background.height=document.body.clientHeight;
-
+		var totalEnemies = 10;
+		var Nenemies3 = Phaser.Math.Between(1,totalEnemies);
+		
 		this.createEnemy3Timer = this.time.addEvent({
 			delay: 1500,                // ms
 			callback: this.crearEnemy3,
 			//args: [],
 			callbackScope: this,
-			loop: true
+			repeat: Nenemies3
 		});
 
 		this.createEnemy3Timer = this.time.addEvent({
@@ -92,7 +94,7 @@ class Level extends Phaser.Scene {
 			callback: this.crearEnemy1,
 			//args: [],
 			callbackScope: this,
-			loop: true
+			repeat: totalEnemies-Nenemies3
 		});
 
 
@@ -104,12 +106,12 @@ class Level extends Phaser.Scene {
 
 	crearEnemy3(){
 
-		//const enemy3 = new Enemy3(this, Phaser.Math.FloatBetween(0,document.body.clientWidth), Phaser.Math.FloatBetween(0,document.body.clientHeight));
-		//this.add.existing(enemy3);
+		const enemy3 = new Enemy3(this, Phaser.Math.FloatBetween(0,document.body.clientWidth), Phaser.Math.FloatBetween(0,document.body.clientHeight));
+		this.add.existing(enemy3);
 	}
 	crearEnemy1(){
-		//const enemy1 = new Enemy1(this,Phaser.Math.FloatBetween(0,document.body.clientWidth), Phaser.Math.FloatBetween(0,document.body.clientHeight))
-		//this.add.existing(enemy1);
+		const enemy1 = new Enemy1(this,Phaser.Math.FloatBetween(0,document.body.clientWidth), Phaser.Math.FloatBetween(0,document.body.clientHeight))
+		this.add.existing(enemy1);
 
 	}
 
