@@ -46,6 +46,16 @@ create(){
 		});
 
 		this.crearParticulas();
+
+		this.laser_shot = this.scene.sound.add('laser_shot');
+		this.laser_shot.loop = false;
+
+		this.hurt = this.scene.sound.add('hurt');
+		this.hurt.loop = false;
+
+		this.travel = this.scene.sound.add('travel');
+		this.travel.loop = true;
+
 }
 
 crearParticulas() {
@@ -123,6 +133,7 @@ handleScore(enemy){
 }
 
 handleEnemyCollition(){
+	this.hurt.play();	
 	this.scene.cameras.main.shake(60);
 	this.scene.cameras.main.flash(200, 172, 29, 41);
 	if(this.isShieldActive){
@@ -231,7 +242,7 @@ this.body.setFriction(10,10);
     {
 		
 		if(!this.hasShot){
-		
+			this.laser_shot.play();	
 			const playerBullet = new PlayerBullet(this.scene, this.x,this.y);
 			this.scene.playerBullets.push(playerBullet);
 			this.scene.add.existing(playerBullet);
