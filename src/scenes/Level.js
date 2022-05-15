@@ -127,7 +127,7 @@ class Level extends Phaser.Scene {
 
 		
 		this.soundtrack01 = this.sound.add('soundtrack01');
-		this.soundtrack01.loop = false;
+		this.soundtrack01.loop = true;
 		this.soundtrack01.play();
 
 		this.physics.world.setBounds(0,0,3000,3000,true,true,true);
