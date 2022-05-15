@@ -3,12 +3,15 @@
 
 /* START OF COMPILED CODE */
 
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
+
 class EventComponent {
-	
+
 	constructor(gameObject) {
 		this.gameObject = gameObject;
 		gameObject["__EventComponent"] = this;
-		
+
 		/* START-USER-CTR-CODE */
 		this.scene = this.gameObject.scene;
 
@@ -22,15 +25,15 @@ class EventComponent {
 
 		/* END-USER-CTR-CODE */
 	}
-	
+
 	/** @returns {EventComponent} */
 	static getComponent(gameObject) {
 		return gameObject["__EventComponent"];
 	}
-	
+
 	/** @type {Phaser.GameObjects.GameObject} */
 	gameObject;
-	
+
 	/* START-USER-CODE */
 
 	start() {
