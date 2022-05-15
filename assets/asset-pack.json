@@ -176,6 +176,13 @@
                 ],
                 "type": "scripts",
                 "key": "ShipShield"
+            },
+            {
+                "url": [
+                    "assets/audio/soundtrack01.mp3"
+                ],
+                "type": "audio",
+                "key": "soundtrack01"
             }
         ]
     },
