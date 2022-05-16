@@ -45,7 +45,18 @@ create(){
 		
 		});
 
+
 		this.crearParticulas();
+
+		this.laser_shot = this.scene.sound.add('laser_shot');
+		this.laser_shot.loop = false;
+
+		this.hurt = this.scene.sound.add('hurt');
+		this.hurt.loop = false;
+
+		this.travel = this.scene.sound.add('travel');
+		this.travel.loop = true;
+
 }
 
 crearParticulas() {
@@ -123,6 +134,7 @@ handleScore(enemy){
 }
 
 handleEnemyCollition(){
+	this.hurt.play();	
 	this.scene.cameras.main.shake(60);
 	this.scene.cameras.main.flash(200, 172, 29, 41);
 	if(this.isShieldActive){
@@ -146,7 +158,7 @@ handleEnemyCollition(){
 					break;
 			case 0:
 					this.scene.heart1.visible=false
-					//ir a gameOVer
+				this.morirAnimation();
 					break;
 		
 			default:
@@ -154,6 +166,62 @@ handleEnemyCollition(){
 		}
 	}
 	
+}
+
+morirAnimation(){
+
+	this.body.enable=false;
+	var entrandoTimeline = this.scene.tweens.createTimeline();
+	entrandoTimeline.add({
+		targets: this,
+		scale: 1.5,
+		duration: 100,
+	
+		ease: 'Linear',
+
+	});
+	entrandoTimeline.add({
+		targets: this,
+		scale: 0.1,
+		duration: 100,
+		ease: 'Linear'
+
+	});
+	entrandoTimeline.add({
+		targets: this,
+		scale: 1,
+		duration: 100,
+		ease: 'Linear',
+		onComplete: function(){
+
+			this.play("hit1",true);
+			this.particles.destroy();
+		},
+		callbackScope:this,
+	});
+
+	entrandoTimeline.add({
+		targets: this,
+		scale: 3,
+		alpha: 0.5,
+		duration: 100,
+		ease: 'Linear',
+		repeat: 3,
+		yoyo:true,
+		onComplete: function(){
+
+			this.scene.cameras.main.fadeOut(2000);
+			this.scene.cameras.main.once('camerafadeoutcomplete', function () {	
+
+				this.scene.scene.start('GameOver');
+				
+					}, this);
+		},
+		callbackScope:this
+
+	});
+	entrandoTimeline.play();
+
 }
 
 update(){
@@ -175,7 +243,7 @@ this.body.setFriction(10,10);
     {
 		
 		if(!this.hasShot){
-		
+			this.laser_shot.play();	
 			const playerBullet = new PlayerBullet(this.scene, this.x,this.y);
 			this.scene.playerBullets.push(playerBullet);
 			this.scene.add.existing(playerBullet);
@@ -210,7 +278,8 @@ this.body.setFriction(10,10);
 		this.scene.physics.velocityFromRotation(this.rotation, 350, this.body.velocity);
     }
 
-	if(this.gotShield){
+
+	if(this.gotShield && !this.isShieldActive){
 		console.log("aparecer escudo")
 		const shieldImg = new ShipShield(this.scene, this.x, this.y);
 		this.scene.add.existing(shieldImg);

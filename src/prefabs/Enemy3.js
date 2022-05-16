@@ -22,7 +22,8 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 		this.scene.physics.add.overlap(this.scene.playerBullets, this,this.enemyDestroy);
 		this.setScale(1)
 		this.animarNacimiento()
-		
+		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
+		this.enemy_destroy.loop = false;
 	}
 
 	animarNacimiento(){
@@ -66,17 +67,16 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 
 	}
 	
-	
 	enemyDestroy(bullet,enemy){
 		//poner sonido
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.body.enable=false;
 		enemy.scene.player.handleScore(enemy);
 		enemy.scene.EnemiesDestroyed++;
-		console.log(enemy.scene.EnemiesDestroyed);
+	
 		bullet.particles.destroy();
 		bullet.destroy();
-	
 		var destroyTimer = enemy.scene.time.addEvent({
 			delay: 500,                // ms
 			callback: function(){
@@ -95,9 +95,10 @@ class Enemy3 extends Phaser.GameObjects.Sprite {
 
 	playerCollide(player,enemy){
 		enemy.play("explosion1",true);
+		enemy.enemy_destroy.play();	
 		enemy.scene.EnemiesDestroyed++;
 		enemy.body.enable=false;
-		console.log(enemy.scene.EnemiesDestroyed);
+		//console.log(enemy.scene.EnemiesDestroyed);
 		var destroyTimer = enemy.scene.time.addEvent({
 		delay: 500,                // ms
 		callback: function(){

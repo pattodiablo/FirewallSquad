@@ -19,23 +19,19 @@
                 "key": "Boss"
             },
             {
-                "url": [
-                    "assets/audio/sfx/boss_move.mp3"
-                ],
-                "type": "audio",
-                "key": "boss_move"
+                "url": "assets/botonera.png",
+                "type": "image",
+                "key": "botonera"
             },
             {
-                "url": [
-                    "assets/audio/sfx/death_player.mp3"
-                ],
-                "type": "audio",
-                "key": "death_player"
+                "url": "assets/creditos.png",
+                "type": "image",
+                "key": "creditos"
             },
             {
-                "url": "assets/dino.png",
-                "key": "dino",
-                "type": "image"
+                "url": "src/scenes/Creditos.js",
+                "type": "sceneFile",
+                "key": "Creditos"
             },
             {
                 "url": [
@@ -129,11 +125,16 @@
                 "key": "flares"
             },
             {
+                "url": "src/scenes/GameOver.js",
+                "type": "sceneFile",
+                "key": "GameOver"
+            },
+            {
                 "url": [
-                    "assets/audio/sfx/game_over.mp3"
+                    "src/prefabs/GameOverAnimation.js"
                 ],
-                "type": "audio",
-                "key": "game_over"
+                "type": "scripts",
+                "key": "GameOverAnimation"
             },
             {
                 "url": "assets/heart.png",
@@ -172,6 +173,11 @@
                 "key": "laser_shot"
             },
             {
+                "url": "assets/logo.png",
+                "type": "image",
+                "key": "logo"
+            },
+            {
                 "url": "assets/player.png",
                 "type": "image",
                 "key": "player"
@@ -208,6 +214,11 @@
                 "key": "propsNew"
             },
             {
+                "url": "assets/rejugarBtn.png",
+                "type": "image",
+                "key": "rejugarBtn"
+            },
+            {
                 "url": [
                     "src/prefabs/Shield.js"
                 ],
@@ -239,6 +250,11 @@
                 ],
                 "type": "audio",
                 "key": "soundtrack01"
+            },
+            {
+                "url": "assets/splash_art.png",
+                "type": "image",
+                "key": "splash_art"
             },
             {
                 "url": [
