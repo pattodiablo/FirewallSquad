@@ -25,7 +25,7 @@ class Boss extends Phaser.GameObjects.Sprite {
 		
 		this.animarNacimiento()
 
-		this.vel = Phaser.Math.Between(50,100);
+		this.vel = Phaser.Math.Between(90,200);
 		this.enemy_destroy = this.scene.sound.add('enemy_destroy');
 		this.enemy_destroy.loop = false;
 		this.life = 50;
@@ -35,8 +35,8 @@ class Boss extends Phaser.GameObjects.Sprite {
 
 	update(){
 		if(this.active){
-			//this.angle= 
-			this.scene.physics.velocityFromAngle(-90+90+(180/Math.PI)*Phaser.Math.Angle.Between(this.x,this.y,this.scene.player.x,this.scene.player.y), this.vel , this.body.velocity);
+		
+			this.scene.physics.velocityFromAngle((180/Math.PI)*Phaser.Math.Angle.Between(this.x,this.y,this.scene.player.x,this.scene.player.y), this.vel , this.body.velocity);
 		}
 		
 	
